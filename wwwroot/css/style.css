@@ -1,0 +1,47 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+.topo{
+    position: absolute;
+    width: 100%;
+    height: 53px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #F1F1F1;
+}
+
+/* .posicaoLogo{
+    
+} */
+
+.posicaoLogo a{
+    padding: 7px 7px;
+}
+
+.posicaoLogo img{
+    width: 78px;
+    height: 27px;
+    align-items: center;
+    margin-left: 25px;
+}
+
+.pesquisa input{
+    /* position: absolute; */
+    width: 215px;
+    height: 28px;
+    background-color: #FAFAFA;
+    border: 1px solid #DCDCDC;
+    box-sizing: border-box;
+    border-radius: 2px;
+}
+
+.imgLink{
+    width: 25px;
+    height: 25px;
+    margin-right: 20px;
+}
+

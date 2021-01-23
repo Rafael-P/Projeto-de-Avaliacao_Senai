@@ -7,9 +7,20 @@
     <link rel="stylesheet" href="~/css/style.css" />
 </head>
 <body>
-    <header>
-        @* cabecalho *@
-        <h1>Teste</h1>
+    <header class="topo">
+        <div class="posicaoLogo">
+            <a href="~/Views/Home/index.cshtml"><img src="~/img/Instadev.svg" alt="Logo da pagina"></a>
+        </div>
+        <div class="pesquisa">
+            <input type="text" id="txtPesquisa" placeholder="Pesquisar">
+        </div>
+        <div class="links">
+            <a href="~/Views/Home/index.cshtml"><img src="~/img/Vector.png" alt="Link para o feed" class="imgLink"></a>
+            <a href="#"><img src="~/img/plane 1.png" alt="" class="imgLink"></a>
+            <a href="#"><img src="~/img/compass 1.png" alt="" class="imgLink"></a>
+            <a href="#"><img src="~/img/Vector(1).png" alt="" class="imgLink"></a>
+            <a href="~/Views/Perfil/index.cshtml"><img src="~/img/thank-you 1.png" alt="Link para o perfil" class="imgLink"></a>
+        </div>
     </header>
 
       

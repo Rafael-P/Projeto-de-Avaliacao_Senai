@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\R4f4e\\OneDrive\\Área de Trabalho\\Projeto-de-Avaliacao_Senai\\Projeto-de-Avaliacao_Senai.csproj": {}
+    "C:\\Users\\R4f4e\\OneDrive\\Área de Trabalho\\ProjetoSenai\\Projeto-de-Avaliacao_Senai\\Projeto-de-Avaliacao_Senai.csproj": {}
   },
   "projects": {
-    "C:\\Users\\R4f4e\\OneDrive\\Área de Trabalho\\Projeto-de-Avaliacao_Senai\\Projeto-de-Avaliacao_Senai.csproj": {
+    "C:\\Users\\R4f4e\\OneDrive\\Área de Trabalho\\ProjetoSenai\\Projeto-de-Avaliacao_Senai\\Projeto-de-Avaliacao_Senai.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\R4f4e\\OneDrive\\Área de Trabalho\\Projeto-de-Avaliacao_Senai\\Projeto-de-Avaliacao_Senai.csproj",
+        "projectUniqueName": "C:\\Users\\R4f4e\\OneDrive\\Área de Trabalho\\ProjetoSenai\\Projeto-de-Avaliacao_Senai\\Projeto-de-Avaliacao_Senai.csproj",
         "projectName": "Projeto-de-Avaliacao_Senai",
-        "projectPath": "C:\\Users\\R4f4e\\OneDrive\\Área de Trabalho\\Projeto-de-Avaliacao_Senai\\Projeto-de-Avaliacao_Senai.csproj",
+        "projectPath": "C:\\Users\\R4f4e\\OneDrive\\Área de Trabalho\\ProjetoSenai\\Projeto-de-Avaliacao_Senai\\Projeto-de-Avaliacao_Senai.csproj",
         "packagesPath": "C:\\Users\\R4f4e\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\R4f4e\\OneDrive\\Área de Trabalho\\Projeto-de-Avaliacao_Senai\\obj\\",
+        "outputPath": "C:\\Users\\R4f4e\\OneDrive\\Área de Trabalho\\ProjetoSenai\\Projeto-de-Avaliacao_Senai\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\R4f4e\\AppData\\Roaming\\NuGet\\NuGet.Config"
