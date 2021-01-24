@@ -1,6 +1,7 @@
+/*Reset*/
 *{
-    margin: 0%;
-    padding: 0%;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
@@ -8,40 +9,55 @@
     position: absolute;
     width: 100%;
     height: 53px;
+    border: 1px solid #F1F1F1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cabecalho{
+    width: 70%;
+    height: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: 1px solid #F1F1F1;
 }
 
-/* .posicaoLogo{
-    
-} */
-
-.posicaoLogo a{
-    padding: 7px 7px;
+.posicaoLogo{
+    width: 20%;
 }
 
 .posicaoLogo img{
     width: 78px;
     height: 27px;
+}
+
+.pesquisa{
+    width: 30%;
+    display: flex;
+    justify-content: flex-end;
     align-items: center;
-    margin-left: 25px;
 }
 
 .pesquisa input{
-    /* position: absolute; */
     width: 215px;
     height: 28px;
+    color: #AFAFAF;
+    text-align: center;
     background-color: #FAFAFA;
     border: 1px solid #DCDCDC;
-    box-sizing: border-box;
     border-radius: 2px;
 }
 
-.imgLink{
+.links{
+    width: 22%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.links img{
     width: 25px;
     height: 25px;
-    margin-right: 20px;
 }
 
