@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "xIeNouuLReVQ3q56QgQ+XQwLlzF6q7dcIPH9D9vhA4klnJ+R5yY5DP8Jg/3XJHFBuccMKzLvxlVDj8MkNWLBHQ==",
+  "dgSpecHash": "UICFszb25u1rsGXDQhpg+K5vjlWmuZRTAbX5JlPyPJqIzKc5gSmJcWXa2GjRAMfT52/x+Tz2PF2yrrQhGy5e4A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Flávia\\Documents\\Técnico\\Projeto-de-Avaliacao_Senai\\Projeto-de-Avaliacao_Senai.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\Gabi\\Desktop\\Projeto-de-Avaliacao_Senai\\Projeto-de-Avaliacao_Senai.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Gabi\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.8\\microsoft.aspnetcore.app.ref.3.1.8.nupkg.sha512",
+    "C:\\Users\\Gabi\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.9\\microsoft.netcore.app.host.win-x64.3.1.9.nupkg.sha512"
+  ],
   "logs": []
 }
