@@ -10,7 +10,7 @@ namespace Projeto_de_Avaliacao_Senai.Models
             {
                 foreach (var item in linhas)
                 {
-                    output.Write(item + '\n')
+                    output.Write(item + '\n');
                 }
             }
         }

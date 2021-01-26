@@ -21,10 +21,31 @@ namespace Projeto_de_Avaliacao_Senai.Models
         //Criar linha CSV
         public string Prepare(EdUsuario u)
         {
-            return $"{e.Nome};{e.NUsuario};{e.Email}";
+            return $"{u.Nome};{u.NUsuario};{u.Email}";
         }
 
-        
+        public void Delete(string email)
+        {
+            List<string> linhas = ReadAllLinesCSV(PATH);
+
+            //remove a linha com o email comparado
+            linhas.RemoveAll( x => x.Split(";")[2] == email() );
+        }
+
+        public void Update(EdUsuario u)
+        {
+            List<string> linhas = ReadAllLinesCSV(PATH);
+
+            //remove a linha com o email comparado
+            linhas.RemoveAll( x => x.Split(";")[2] == u.Email() );
+
+            //adiciona novos dados na lista
+            linhas.Add( Prepare(u) );
+
+            //reescreve o csv com a lista alterada
+            RewriteCSV(PATH, linhas);
+        }
+
 
     }
 }
