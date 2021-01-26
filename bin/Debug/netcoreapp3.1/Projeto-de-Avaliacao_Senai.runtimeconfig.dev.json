@@ -1,13 +1,8 @@
 {
   "runtimeOptions": {
     "additionalProbingPaths": [
-<<<<<<< HEAD
       "C:\\Users\\R4f4e\\.dotnet\\store\\|arch|\\|tfm|",
       "C:\\Users\\R4f4e\\.nuget\\packages"
-=======
-      "C:\\Users\\Gabi\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\Gabi\\.nuget\\packages"
->>>>>>> 01314772ad7d37469cbbea7af1ff2a85ce701dd5
     ]
   }
 }
