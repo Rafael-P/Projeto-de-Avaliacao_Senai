@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "C:\\Users\\R4f4e\\OneDrive\\Área de Trabalho\\Projeto-de-Avaliacao_Senai\\Projeto-de-Avaliacao_Senai.csproj": {}
   },
   "projects": {
@@ -15,6 +16,22 @@
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\R4f4e\\AppData\\Roaming\\NuGet\\NuGet.Config"
+=======
+    "C:\\Users\\Gabi\\Desktop\\Projeto-de-Avaliacao_Senai\\Projeto-de-Avaliacao_Senai.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Gabi\\Desktop\\Projeto-de-Avaliacao_Senai\\Projeto-de-Avaliacao_Senai.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Gabi\\Desktop\\Projeto-de-Avaliacao_Senai\\Projeto-de-Avaliacao_Senai.csproj",
+        "projectName": "Projeto-de-Avaliacao_Senai",
+        "projectPath": "C:\\Users\\Gabi\\Desktop\\Projeto-de-Avaliacao_Senai\\Projeto-de-Avaliacao_Senai.csproj",
+        "packagesPath": "C:\\Users\\Gabi\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Gabi\\Desktop\\Projeto-de-Avaliacao_Senai\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Gabi\\AppData\\Roaming\\NuGet\\NuGet.Config"
+>>>>>>> 01314772ad7d37469cbbea7af1ff2a85ce701dd5
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -24,6 +41,7 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -35,6 +53,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "imports": [
             "net461",
             "net462",
@@ -45,6 +64,16 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.1.8, 3.1.8]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[3.1.9, 3.1.9]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -53,7 +82,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.404\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

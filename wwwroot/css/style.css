@@ -3,8 +3,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Segoe UI;
 }
 
+/*Cabeçalho*/
 .topo{
     position: absolute;
     width: 100%;
@@ -49,6 +51,10 @@
     border-radius: 2px;
 }
 
+.placeicon{
+    font-family: fontawesome;
+}
+
 .links{
     width: 22%;
     display: flex;
@@ -60,4 +66,4 @@
     width: 25px;
     height: 25px;
 }
-
+/*Fim do cabeçalho*/
