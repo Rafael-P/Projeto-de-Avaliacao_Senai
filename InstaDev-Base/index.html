@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InstaDev</title>
+    <link rel='stylesheet' href='//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' type='text/css'>
+    <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+    <header class="topo">
+        <div class="cabecalho">
+            <div class="posicaoLogo">
+                <a href="#"><img src="img/Logo.svg" alt="Logo da pagina"></a>
+            </div>
+            <div class="pesquisa">  
+                <input type="text" id="txtPesquisa" class="placeicon" placeholder="&#xf002; Pesquisar">
+            </div>
+            <div class="links">
+                <a href="#"><img src="img/Home.svg" alt="Feed"></a>
+                <a href="#"><img src="img/Direct.svg" alt="Direct"></a>
+                <a href="#"><img src="img/Bussula.svg" alt="Bussula"></a>
+                <a href="#"><img src="img/Like.svg" alt="Like"></a>
+                <a href="#"><img src="img/Perfil.png" alt="Link para o perfil"></a>
+            </div>
+        </div>
+    </header>
+    <div class="espaco"></div>
+    <section class="head">       
+            <hr class="vertical">
+            <div class="container">
+                <h1>Editar Perfil</h1>
+            </div>    
+            <div class="miniContainer">
+                <img src="img/Perfil.png" alt="foto de perfil"/>
+                <div class="z">
+                    <h2>Nome_do_Usuario</h2>
+                    <a href="#">Alterar foto do Perfil</a>
+                </div>   
+            </div>
+    </section>
+    <br>
+    <form>
+        <fieldset>
+            <div class="campo">
+                <label>Nome</label>
+                <input type="text" name="nome" id="nome">
+                <p>Ajude as pessoas a descobrir sua conta usando o nome pelo qual você é conhecido: seu nome completo, apelido ou nome comercial.</p>
+                <p>Você pode alterar o seu nome apenas duas vezes a cada 14 dias.</p>
+            </div>
+            <br>
+            <div class="campo">
+                <label>Nome de Usuario</label>
+                <input type="text" name="nome de usuario" id="nome do usuario">
+                <p>Na maioria dos casos, você poderá alterar seu nome de usuário novamente para nascimento_tr por mais 14 dias.</p>
+                <br>
+                <p>Informações pessoais: Forneça suas informações pessoais, mesmo se a conta for usada para uma empresa, um animal de estimação ou outra coisa. Elas não farão parte do seu perfil público.</p>
+            </div>
+            <br>
+            <div class="campo">
+                <label>Email</label>
+                <input type="email" name="email" id="email">
+            </div>
+            <br>
+        </fieldset>
+    </form>
+    <div class="agrupamento">
+        <button type="submit">Enviar</button>
+        <a href="#">Desativar minha conta definitivamente</a>
+    </div>
+
+</body>
+</html>
