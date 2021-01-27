@@ -154,4 +154,3 @@ C:\Users\Gabi\Desktop\Projeto-de-Avaliacao_Senai\obj\Debug\netcoreapp3.1\Projeto
 C:\Users\Gabi\Desktop\Projeto-de-Avaliacao_Senai\obj\Debug\netcoreapp3.1\Projeto-de-Avaliacao_Senai.genruntimeconfig.cache
 C:\Users\Gabi\Desktop\Projeto-de-Avaliacao_Senai\obj\Debug\netcoreapp3.1\Projeto-de-Avaliacao_Senai.csproj.CopyComplete
 C:\Users\R4f4e\OneDrive\Área de Trabalho\Projeto-de-Avaliacao_Senai\obj\Debug\netcoreapp3.1\Razor\Views\Feed\index.cshtml.g.cs
-C:\Users\R4f4e\OneDrive\Área de Trabalho\Projeto-de-Avaliacao_Senai\obj\Debug\netcoreapp3.1\Razor\InstaDev-Base\index.cshtml.g.cs
