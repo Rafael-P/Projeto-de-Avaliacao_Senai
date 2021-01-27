@@ -2,3 +2,74 @@
     ViewData["Title"] = "Perfil";
 }
 
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - InstaDev</title>
+    <link rel='stylesheet' href='//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' type='text/css'>
+    <link rel="stylesheet" href="~/css/style.css" />
+</head>
+<body>
+    <header class="topo">
+        <div class="cabecalho">
+            <div class="posicaoLogo">
+                <a href="~/Views/Home/index.cshtml"><img src="~/img/Logo.svg" alt="Logo da pagina"></a>
+            </div>
+            <div class="pesquisa">  
+                <input type="text" id="txtPesquisa" class="placeicon" placeholder="&#xf002; Pesquisar">
+            </div>
+            <div class="links">
+                <a href="~/Views/Home/index.cshtml"><img src="~/img/Home.svg" alt="Feed"></a>
+                <a href="#"><img src="~/img/Direct.svg" alt="Direct"></a>
+                <a href="#"><img src="~/img/Bussula.svg" alt="Bussula"></a>
+                <a href="#"><img src="~/img/Like.svg" alt="Like"></a>
+                <a href="~/Views/Perfil/index.cshtml"><img src="~/img/Perfil.png" alt="Link para o perfil"></a>
+            </div>
+        </div>
+    </header>
+    
+    <main> <!-- Início do perfil -->
+        <div class="perfil"> <!-- Parte onde tem a foto do usuário -->        
+            <div class="foto">
+                <img src="/img/Perfil.png" alt="foto do perfil">
+            </div>       
+        </div>  
+
+            <section class="introducao"> <!-- Início da introdução com informações do usuário -->                
+                <div class="nome">    
+                    <h1>yes_baby</h1>
+               </div>
+                
+                <div>
+                    <ul class="info">
+                        <li>2 Publicações</li>
+                        <li>214 Seguidores</li>
+                        <li>128 Seguindo</li>
+                    </ul>
+                </div>
+
+                <div class="opcoes">
+                    <div class="nomeCompleto">
+                        <h1>Marcos Jeeves</h1>
+                    </div> 
+
+                    <div class="sair">
+                        <h2>Sair</h2>
+                    </div> 
+                </div>                                 
+            </section>  <!-- Fim das informações do usuário-->
+
+            <div>  <!-- Parte onde mostra as fotos, comentários e curtidas -->
+                <h1>Publicações</h1>    
+            </div>   
+            
+            <div class="pub">
+
+            </div>
+    </div>   
+    </main> <!-- Fim do Perfil -->
+    
+</body>
+</html>

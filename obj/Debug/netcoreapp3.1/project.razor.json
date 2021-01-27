@@ -14402,6 +14402,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\unicor\\OneDrive\\Área de Trabalho\\Projeto-de-Avaliacao_Senai\\Views\\Feed\\index.cshtml",
+      "TargetPath": "Views\\Feed\\index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\unicor\\OneDrive\\Área de Trabalho\\Projeto-de-Avaliacao_Senai\\Views\\_ViewStart.cshtml",
       "TargetPath": "Views\\_ViewStart.cshtml",
       "FileKind": "mvc"
@@ -14429,11 +14434,6 @@
     {
       "FilePath": "c:\\Users\\unicor\\OneDrive\\Área de Trabalho\\Projeto-de-Avaliacao_Senai\\Views\\Home\\index.cshtml",
       "TargetPath": "Views\\Home\\index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\unicor\\OneDrive\\Área de Trabalho\\Projeto-de-Avaliacao_Senai\\Views\\Login\\index.cshtml",
-      "TargetPath": "Views\\Login\\index.cshtml",
       "FileKind": "mvc"
     }
   ],
