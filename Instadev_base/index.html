@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instadev - cadastro</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+    
+
+<body>
+    <div class="estrutura">
+        
+        <img src="img/Instadev.png " alt="Logo Instadev">
+            <p>Cadastre-se para ver fotos e <br> vídeos dos seus amigos.</p>
+
+            <div>
+                <!--Formulário início-->
+                <form >
+               
+                    <input  type="text" name="" placeholder="E-mail" class="inputs" id="input1" required />
+                   
+                    <!--Data nasciemento início-->
+                    <div class="datas"> 
+                        <P>Data de nascimento</P>
+                    
+                    <select name = "Dia" id="dia" required >
+                        
+                        <option value="">Dia</option>
+                             
+                    </select>
+                   
+                    <select name="Mês" required >
+                        
+                        <option>Mês </option>
+                        <option value="01">Janeiro  </option>
+                        <option value="02">Fevereiro</option>
+                        <option value="03">Março    </option>
+                        <option value="04">Abril    </option>
+                        <option value="05">Maio     </option>
+                        <option value="06">Junho    </option>
+                        <option value="07">Julho    </option>
+                        <option value="08">Agosto   </option>
+                        <option value="09">Setembro </option>
+                        <option value="10">Outubro  </option>
+                        <option value="11">Novembro </option>
+                        <option value="12">Dezembro </option>
+      
+                    </select>	
+                    
+                    <select name = "Ano" id="ano" required >
+                        <option value="">Ano</option>
+                    </select>
+
+                    </div>
+                    <!--Data nasciemento Fim-->
+                    
+                    <input  type="text" name="" placeholder="Nome completo" class="inputs" required />
+                    <input  type="text" name="" placeholder="Nome do usuário" class="inputs" required />
+                    <input  type="password" name="" placeholder="Senha" class="inputs" required />
+                    <button class="botao">Cadastrar</button>
+
+                </form>
+
+                <p id="pf">Ao se cadastrar, você concorda com nossos <br> Termos, Política de Dados e Política de Cookies. </p>
+
+
+                <!--Formulário Fim-->
+          
+    </div>
+    
+    <div class="estrutura2">
+        <p>Tem uma conta?  </p>  
+        <a href="#">    Conecte-se</a>
+    </div>
+
+    <footer class="foo">
+    <p id="po">Obtenha o aplicativo.</p>
+    <img id="loja" src="img/app_store 1.png " alt="Baixe o nosso aplicativo na Apple Store">
+    <img id="loja1" src="img/google_play 1.png " alt="Baixe o nosso aplicativo na Google Play">
+
+    </footer>
+    
+
+</body>
+
+<script>
+var ano = document.getElementById('ano');
+var dia= document.getElementById('dia');
+
+
+    for(var i = 1919; i <= 2021; i++){
+        ano.innerHTML+='<option value="'+i+'">'+i+'</option>'; }
+            
+    for(var i = 1; i <= 31; i++){
+        dia.innerHTML+='<option value="'+i+'">'+i+'</option>'; }
+            
+
+</script>
+
