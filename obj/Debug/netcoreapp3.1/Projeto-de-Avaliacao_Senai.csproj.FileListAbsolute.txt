@@ -37,3 +37,40 @@ C:\Users\R4f4e\OneDrive\Área de Trabalho\Projeto-de-Avaliacao_Senai\obj\Debug\n
 C:\Users\R4f4e\OneDrive\Área de Trabalho\Projeto-de-Avaliacao_Senai\obj\Debug\netcoreapp3.1\Razor\Views\Login\index.cshtml.g.cs
 C:\Users\R4f4e\OneDrive\Área de Trabalho\Projeto-de-Avaliacao_Senai\obj\Debug\netcoreapp3.1\Razor\Views\Perfil\index.cshtml.g.cs
 C:\Users\R4f4e\OneDrive\Área de Trabalho\Projeto-de-Avaliacao_Senai\obj\Debug\netcoreapp3.1\Razor\Views\Home\index.cshtml.g.cs
+C:\Users\fic\Desktop\Projeto-de-Avaliacao_Senai\obj\Debug\netcoreapp3.1\Projeto-de-Avaliacao_Senai.csprojAssemblyReference.cache
+C:\Users\fic\Desktop\Projeto-de-Avaliacao_Senai\obj\Debug\netcoreapp3.1\staticwebassets\Projeto-de-Avaliacao_Senai.StaticWebAssets.Manifest.cache
+C:\Users\fic\Desktop\Projeto-de-Avaliacao_Senai\obj\Debug\netcoreapp3.1\staticwebassets\Projeto-de-Avaliacao_Senai.StaticWebAssets.xml
+C:\Users\fic\Desktop\Projeto-de-Avaliacao_Senai\obj\Debug\netcoreapp3.1\Projeto-de-Avaliacao_Senai.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\fic\Desktop\Projeto-de-Avaliacao_Senai\obj\Debug\netcoreapp3.1\Projeto-de-Avaliacao_Senai.RazorAssemblyInfo.cache
+C:\Users\fic\Desktop\Projeto-de-Avaliacao_Senai\obj\Debug\netcoreapp3.1\Projeto-de-Avaliacao_Senai.RazorAssemblyInfo.cs
+C:\Users\fic\Desktop\Projeto-de-Avaliacao_Senai\obj\Debug\netcoreapp3.1\Projeto-de-Avaliacao_Senai.AssemblyInfoInputs.cache
+C:\Users\fic\Desktop\Projeto-de-Avaliacao_Senai\obj\Debug\netcoreapp3.1\Projeto-de-Avaliacao_Senai.AssemblyInfo.cs
+C:\Users\fic\Desktop\Projeto-de-Avaliacao_Senai\obj\Debug\netcoreapp3.1\Projeto-de-Avaliacao_Senai.TagHelpers.input.cache
+C:\Users\fic\Desktop\Projeto-de-Avaliacao_Senai\obj\Debug\netcoreapp3.1\Projeto-de-Avaliacao_Senai.TagHelpers.output.cache
+C:\Users\fic\Desktop\Projeto-de-Avaliacao_Senai\obj\Debug\netcoreapp3.1\Projeto-de-Avaliacao_Senai.RazorCoreGenerate.cache
+C:\Users\fic\Desktop\Projeto-de-Avaliacao_Senai\obj\Debug\netcoreapp3.1\Projeto-de-Avaliacao_Senai.dll
+C:\Users\fic\Desktop\Projeto-de-Avaliacao_Senai\obj\Debug\netcoreapp3.1\Projeto-de-Avaliacao_Senai.pdb
+C:\Users\fic\Desktop\Projeto-de-Avaliacao_Senai\bin\Debug\netcoreapp3.1\appsettings.Development.json
+C:\Users\fic\Desktop\Projeto-de-Avaliacao_Senai\bin\Debug\netcoreapp3.1\appsettings.json
+C:\Users\fic\Desktop\Projeto-de-Avaliacao_Senai\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
+C:\Users\fic\Desktop\Projeto-de-Avaliacao_Senai\bin\Debug\netcoreapp3.1\Projeto-de-Avaliacao_Senai.exe
+C:\Users\fic\Desktop\Projeto-de-Avaliacao_Senai\bin\Debug\netcoreapp3.1\Projeto-de-Avaliacao_Senai.deps.json
+C:\Users\fic\Desktop\Projeto-de-Avaliacao_Senai\bin\Debug\netcoreapp3.1\Projeto-de-Avaliacao_Senai.runtimeconfig.json
+C:\Users\fic\Desktop\Projeto-de-Avaliacao_Senai\bin\Debug\netcoreapp3.1\Projeto-de-Avaliacao_Senai.runtimeconfig.dev.json
+C:\Users\fic\Desktop\Projeto-de-Avaliacao_Senai\bin\Debug\netcoreapp3.1\Projeto-de-Avaliacao_Senai.dll
+C:\Users\fic\Desktop\Projeto-de-Avaliacao_Senai\bin\Debug\netcoreapp3.1\Projeto-de-Avaliacao_Senai.pdb
+C:\Users\fic\Desktop\Projeto-de-Avaliacao_Senai\bin\Debug\netcoreapp3.1\Projeto-de-Avaliacao_Senai.Views.dll
+C:\Users\fic\Desktop\Projeto-de-Avaliacao_Senai\bin\Debug\netcoreapp3.1\Projeto-de-Avaliacao_Senai.Views.pdb
+C:\Users\fic\Desktop\Projeto-de-Avaliacao_Senai\obj\Debug\netcoreapp3.1\Razor\Views\Cadastro\index.cshtml.g.cs
+C:\Users\fic\Desktop\Projeto-de-Avaliacao_Senai\obj\Debug\netcoreapp3.1\Razor\Views\EdicaoPerfil\index.cshtml.g.cs
+C:\Users\fic\Desktop\Projeto-de-Avaliacao_Senai\obj\Debug\netcoreapp3.1\Razor\Views\Home\index.cshtml.g.cs
+C:\Users\fic\Desktop\Projeto-de-Avaliacao_Senai\obj\Debug\netcoreapp3.1\Razor\Views\Login\index.cshtml.g.cs
+C:\Users\fic\Desktop\Projeto-de-Avaliacao_Senai\obj\Debug\netcoreapp3.1\Razor\Views\Perfil\index.cshtml.g.cs
+C:\Users\fic\Desktop\Projeto-de-Avaliacao_Senai\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\fic\Desktop\Projeto-de-Avaliacao_Senai\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+C:\Users\fic\Desktop\Projeto-de-Avaliacao_Senai\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
+C:\Users\fic\Desktop\Projeto-de-Avaliacao_Senai\obj\Debug\netcoreapp3.1\Razor\Views\_ViewStart.cshtml.g.cs
+C:\Users\fic\Desktop\Projeto-de-Avaliacao_Senai\obj\Debug\netcoreapp3.1\Projeto-de-Avaliacao_Senai.RazorTargetAssemblyInfo.cache
+C:\Users\fic\Desktop\Projeto-de-Avaliacao_Senai\obj\Debug\netcoreapp3.1\Projeto-de-Avaliacao_Senai.RazorTargetAssemblyInfo.cs
+C:\Users\fic\Desktop\Projeto-de-Avaliacao_Senai\obj\Debug\netcoreapp3.1\Projeto-de-Avaliacao_Senai.Views.pdb
+C:\Users\fic\Desktop\Projeto-de-Avaliacao_Senai\obj\Debug\netcoreapp3.1\Projeto-de-Avaliacao_Senai.csproj.CopyComplete
