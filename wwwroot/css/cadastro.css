@@ -13,7 +13,7 @@
 }
 
 body{
-    width: 1200px;
+    max-width: 1200px;
     height: 1024px;
     background: var(--background);
     
@@ -29,6 +29,8 @@ body{
     left: 630px;
     top: 130px;
     border: 1px solid #DCDCDC;
+    align-items: center;
+    justify-content: center;
 
 }
 
@@ -78,6 +80,7 @@ body{
     margin: 2px;
     margin-left: auto;
     margin-right: 202px;
+    color: #868858;
 }
 
 .datas{
@@ -96,7 +99,7 @@ body{
     width: 88px;
     height: 35px;
     font-family: Segoe UI;
-    color:var(--Letra1);
+    color:#868585;
     border: 1px solid #DCDCDC;
     align-items: center;
     margin-left:30px;
