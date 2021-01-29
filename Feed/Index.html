@@ -10,6 +10,7 @@
       type="text/css"
     />
     <link rel="stylesheet" href="css/style.css" />
+    <script type="text/javascript" src="../wwwroot/js/site.js"></script>
   </head>
   <body>
     <header class="topo">
@@ -47,44 +48,43 @@
 
           <section class="status">
             <div>
-                <img src="./img/Feed/vin-diesel.png" alt="Foto de perfil nos status"/>
+                <img src="./img/Feed/vin-diesel.png" alt="Foto de perfil de outro usuário na barra de status"/>
                 <p>vin_diesel</p>
             </div>
             <div>
-                <img src="./img/Feed/gabigordo.png" alt="Foto de perfil nos status"/>
+                <img src="./img/Feed/gabigordo.png" alt="Foto de perfil de outro usuário na barra de status"/>
                 <p>gabigordo</p>
             </div>
             <div>
-                <img src="./img/Feed/will_baiano.png" alt="Foto de perfil nos status"/>
+                <img src="./img/Feed/will_baiano.png" alt="Foto de perfil de outro usuário na barra de status"/>
                 <p>will_baiano</p>
             </div>
             <div>
-                <img src="./img/Feed/tony_stark.png" alt="Foto de perfil nos status"/>
+                <img src="./img/Feed/tony_stark.png" alt="Foto de perfil de outro usuário na barra de status"/>
                 <p>adriano_stark</p>
             </div>
             <div>
-                <img src="./img/Feed/pele.png" alt="Foto de perfil nos status"/>
+                <img src="./img/Feed/pele.png" alt="Foto de perfil de outro usuário na barra de status"/>
                 <p>king_pele</p>
             </div>
             <div>
-                <img src="./img/Feed/samuel_rosa.png" alt="Foto de perfil nos status"/>
+                <img src="./img/Feed/samuel_rosa.png" alt="Foto de perfil de outro usuário na barra de status"/>
                 <p>samuel_rosa</p>
             </div>
             <div>
-                <img src="./img/Feed/chaves_metal.png" alt="Foto de perfil nos status"/>
+                <img src="./img/Feed/chaves_metal.png" alt="Foto de perfil de outro usuário na barra de status"/>
                 <p>chaves_metal</p>
             </div>
           </section>
 
           <section class="postar">
-            <div class="titulo-postar">
+            <div class="cabecalho-postar">
                 <img src="./img/Perfil.png" alt="Foto do proprio perfil"/>
                 <p>Postar</p>
             </div>
-            <div class="inserir-postar">
-                <input type="text" class="descricao" placeholder="Digite a descrição da imagem..."/>
-                <!--Tem que mudar para type="file"-->
-                <input type="file" id="img-postar" class="imagem" placeholder="Escolha a imagem"/>
+            <div class="corpo-postar">
+                <input type="text" class="corpo-postar-descricao" placeholder="Digite a descrição da imagem..."/>
+                <input type="file" id="img-postar" class="corpo-postar-imagem" placeholder="Escolha a imagem"/>
                 <label for="img-postar">Escolha a imagem</label> 
                 <button type="submit">Postar</button>
             </div>
@@ -98,14 +98,21 @@
                 <p>Flamengo, RJ</p>
               </div>
             </div>
+
               <img src="./img/Feed/post-gabigordo.png" alt="Post de outro usuario" class="img-postagem">
+
             <div class="curtidas-comentarios">
+
               <div class="postagem-inserir">
-                <input type="checkbox" placeholder="Curtir"/>
-                <img src="./img/Cementario.svg" alt="">
-                <input type="text" placeholder="Comentar..."/>
+                <div class="f-like">
+                  <label for="amei"><input type="checkbox" name="check" class="love-input" onclick="deslike();" id="amei" onblur="like();"><img src="./img/Like.svg" alt="Amei" id="alterar-icone"></label>
+                </div>
+                <img src="./img/Cementario.svg" alt="Icone de comentário" class="icone-comentario">
+                <input type="text" class="fazer-comentario" placeholder="Comentar..."/>
               </div>
+
               <p>2077 curtidas</p>
+
               <div class="postagem-mostrar">
                 <div class="postagem-comentario">
                   <p class="p-username username">gabigordo</p>
@@ -120,6 +127,7 @@
                   <p class="p-comentario">Esses são bons de bola, entende?</p>
                 </div>
               </div>
+
             </div>
           </section>
 
