@@ -5,87 +5,87 @@
     font-family: Segoe UI;
 }
 
-.espaco{
+.ed-espaco{
     width: 100%;
     height: 40px;
 }
 
-.bloco1{
+.ed-bloco1{
     display: flex;
     margin-right: 15%;
     margin-left: 15%;
 }
 
-.bloco2{
+.ed-bloco2{
     height: 100%;
     width: 24%;
 }
 
-.head{
+.ed-head{
     display: flex;
     height: 100%;
 }
 
-.vertical{
+.ed-vertical{
     width: 1px;
     height: 53px;
 }
 
-.container{
+.ed-container{
     display: flex;
 }
 
-.container h1{
+.ed-container h1{
     font-size: 15px;
     margin-top: 15px;
 }
 
-.bloco3{
+.ed-bloco3{
     padding-left: 10%;
     height: 100%;
 }
 
-.miniContainer{
+.ed-miniContainer{
     display: flex;
     padding-left: 81px;
 }
 
-.miniContainer img{
+.ed-miniContainer img{
     /* margin-left: 230px; */
     width: 50px;
     height: 50px;
 }
 
-.miniContainer a{
+.ed-miniContainer a{
     color: #2686CC;
 }
 
-.z{
+.ed-z{
     margin-left: 20px;
 }
 
-.z h2{
+.ed-z h2{
     font-size: 18px;
 }
 
-.z a{
+.ed-z a{
     font-size: 14px;
 }
 
-.input{
+.ed-input{
     width: 354px;
     height: 30px;
     border: 1px solid #DCDCDC;
     border-radius: 2px;
 }
 
-.campo{
+.ed-campo{
     display: flex;
     /* height: 80px; */
     align-items: start;
 }
 
-.campoFlex{
+.ed-campoFlex{
     display: flex;
     margin-top: 5px;
     padding: 7px;
@@ -93,30 +93,30 @@
     justify-content: flex-end;
 }
 
-.campoInput{
+.ed-campoInput{
     padding-top: 5px;
 }
 
-.campo label{
+.ed-campo label{
     font-size: 14px;
 }
 
-.campo p{
+.ed-campo p{
     font-size: 10px;
 }
 
-.agrupamento{
+.ed-agrupamento{
     display: flex;
     justify-content: space-evenly;
 }
 
-.agrupamento a{
+.ed-agrupamento a{
     color: #2686CC;
     font-size: 12px;
     margin-left: 20px;
 }
 
-.button{
+.ed-button{
     width: 66px;
     height: 30px;
     background: #2686CC;
