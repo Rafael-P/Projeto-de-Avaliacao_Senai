@@ -69,12 +69,12 @@
 /*Fim do cabeçalho*/
 
 /* Início do Perfil */
-.perfil{
+.perfil_P{
     width: 100%;
     height: 100%;
     background-color: crimson;
 }
-.foto{
+.foto_P{
     width: 152px;
     height: 154px;
     background-color: rgba(237, 168, 229, 0.364);
@@ -82,19 +82,19 @@
     display: block;
     margin-left: 250px;
 }
-.nome{
+.nome_P{
     width: 203px;
     height: 30px;
     font-size: 23px;
 }
-.introducao{
+.introducao_P{
     width: 646px;
     height: 154px;
     background-color: rosybrown;
     margin-top: -155px;
     margin-left: 30em;
 }
-.info{
+.info_P{
     font-size: 16px;
     width: 30em;
     height: 5em;
@@ -103,12 +103,12 @@
     justify-content: space-between;
     margin-left: 30px; 
 }
-.opcoes{
+.opcoes_P{
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-.nomeCompleto{
+.nomeCompleto_P{
     width: 138px;
     height: 21px;
     left: 810px;
@@ -116,12 +116,12 @@
     font-size: 14px;
     
 }
-.sair{
+.sair_P{
     font-size: 14px;
     color: #2686CC;
     width: 226px;
 }
-.pub{
+.pub_P{
     width: 100%;
     height: 800px;
     background-color: teal;
