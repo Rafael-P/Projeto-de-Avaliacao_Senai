@@ -3,12 +3,11 @@
 
 // Write your JavaScript code.
 
-function deslike()
-{
-    document.getElementById("alterar-icone").src="../Feed/img/Like.svg";
-}
-
 function like()
 {
-    document.getElementById("alterar-icone").src="../Feed/img/Like-vermelho.svg";
+    if(document.getElementById("amei").checked == false){
+        document.getElementById("alterar-icone").src="../Feed/img/Like-vermelho.svg";
+    }else{
+        document.getElementById("alterar-icone").src="../Feed/img/Like.svg";
+    }
 }
