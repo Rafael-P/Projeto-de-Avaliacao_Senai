@@ -2,3 +2,90 @@
     ViewData["Title"] = "Cadastro";
 }
 
+<div class="estrutura">
+        
+        <img src="img/Instadev.png " alt="Logo Instadev">
+            <p>Cadastre-se para ver fotos e <br> vídeos dos seus amigos.</p>
+
+            <div>
+                <!--Formulário início-->
+                <form >
+               
+                    <input  type="text" name="" placeholder="E-mail" class="inputs" id="input1" required />
+                   
+                    <!--Data nasciemento início-->
+                    <div class="datas"> 
+                        <P>Data de nascimento</P>
+                    
+                    <select name = "Dia" id="dia" required >
+                        
+                        <option value="">Dia</option>
+                             
+                    </select>
+                   
+                    <select name="Mês" required >
+                        
+                        <option>Mês </option>
+                        <option value="01">Janeiro  </option>
+                        <option value="02">Fevereiro</option>
+                        <option value="03">Março    </option>
+                        <option value="04">Abril    </option>
+                        <option value="05">Maio     </option>
+                        <option value="06">Junho    </option>
+                        <option value="07">Julho    </option>
+                        <option value="08">Agosto   </option>
+                        <option value="09">Setembro </option>
+                        <option value="10">Outubro  </option>
+                        <option value="11">Novembro </option>
+                        <option value="12">Dezembro </option>
+      
+                    </select>	
+                    
+                    <select name = "Ano" id="ano" required >
+                        <option value="">Ano</option>
+                    </select>
+
+                    </div>
+                    <!--Data nasciemento Fim-->
+                    
+                    <input  type="text" name="" placeholder="Nome completo" class="inputs" required />
+                    <input  type="text" name="" placeholder="Nome do usuário" class="inputs" required />
+                    <input  type="password" name="" placeholder="Senha" class="inputs" required />
+                    <button class="botao">Cadastrar</button>
+
+                </form>
+
+                <p id="pf">Ao se cadastrar, você concorda com nossos <br> Termos, Política de Dados e Política de Cookies. </p>
+
+
+                <!--Formulário Fim-->
+          
+    </div>
+    
+    <div class="estrutura2">
+        <p>Tem uma conta?  </p> 
+        <a href="#">&nbsp;Conecte-se</a>
+    </div>
+
+    <footer class="foo">
+    <p id="po">Obtenha o aplicativo.</p>
+    <a href="https://apps.apple.com/app/instagram/id389801252?vt=lo"><img id="loja" src="img/app_store 1.png " alt="Baixe o nosso aplicativo na Apple Store"></a>
+    <a href="https://play.google.com/store/apps/details?id=com.instagram.android&referrer=utm_source%3Dinstagramweb%26utm_campaign%3DloginPage%26ig_mid%3DDAFDEBB1-085D-48F5-8B87-A235833D9FAB%26utm_content%3Dlo%26utm_medium%3Dbadge"><img id="loja1" src="img/google_play 1.png " alt="Baixe o nosso aplicativo na Google Play"></a>
+
+
+    </footer>
+
+
+<script>
+var ano = document.getElementById('ano');
+var dia= document.getElementById('dia');
+
+
+    for(var i = 1919; i <= 2021; i++){
+        ano.innerHTML+='<option value="'+i+'">'+i+'</option>'; }
+            
+    for(var i = 1; i <= 31; i++){
+        dia.innerHTML+='<option value="'+i+'">'+i+'</option>'; }
+            
+
+</script>

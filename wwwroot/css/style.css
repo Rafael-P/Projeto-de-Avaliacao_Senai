@@ -50,6 +50,10 @@
     border-radius: 2px;
 }
 
+.placeicon{
+    font-family: fontawesome;
+}
+
 .links{
     width: 22%;
     display: flex;
@@ -61,4 +65,3 @@
     width: 25px;
     height: 25px;
 }
-/*Fim do cabeçalho*/
