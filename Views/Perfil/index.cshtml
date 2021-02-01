@@ -1,75 +1,102 @@
 @{
     ViewData["Title"] = "Perfil";
 }
+<main class="main_P"> <!-- Início do perfil -->   
 
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - InstaDev</title>
-    <link rel='stylesheet' href='//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' type='text/css'>
-    <link rel="stylesheet" href="~/css/style.css" />
-</head>
-<body>
-    <header class="topo">
-        <div class="cabecalho">
-            <div class="posicaoLogo">
-                <a href="~/Views/Home/index.cshtml"><img src="~/img/Logo.svg" alt="Logo da pagina"></a>
-            </div>
-            <div class="pesquisa">  
-                <input type="text" id="txtPesquisa" class="placeicon" placeholder="&#xf002; Pesquisar">
-            </div>
-            <div class="links">
-                <a href="~/Views/Home/index.cshtml"><img src="~/img/Home.svg" alt="Feed"></a>
-                <a href="#"><img src="~/img/Direct.svg" alt="Direct"></a>
-                <a href="#"><img src="~/img/Bussula.svg" alt="Bussula"></a>
-                <a href="#"><img src="~/img/Like.svg" alt="Like"></a>
-                <a href="~/Views/Perfil/index.cshtml"><img src="~/img/Perfil.png" alt="Link para o perfil"></a>
-            </div>
-        </div>
-    </header>
-    
-    <main> <!-- Início do perfil -->
-        <div class="perfil_P"> <!-- Parte onde tem a foto do usuário -->        
+    <div class="conteudo_P">
+        <section class="introducao_P">
+            <!-- Início da introdução com informações do usuário -->
+
             <div class="foto_P">
-                <img src="/img/Perfil.png" alt="foto do perfil">
-            </div>       
-        </div>  
+                <!-- Parte onde tem a foto do usuário -->
+                <img src="~/img/thank-you 3.svg" alt="foto do perfil">
+            </div>
 
-            <section class="introducao_P"> <!-- Início da introdução com informações do usuário -->                
-                <div class="nome_P">    
-                    <h1>yes_baby</h1>
-               </div>
-                
-                <div>
-                    <ul class="info_P">
-                        <li>2 Publicações</li>
-                        <li>214 Seguidores</li>
-                        <li>128 Seguindo</li>
-                    </ul>
+            <div class="corpo_P">
+                <div class="nome_P">
+                    <p class="username_P"> yes_baby</p>
+                    <p> <a class="links_P" href="link edição de perfil"> Editar perfil </a></p>
+                </div>
+
+                <div class="info_P">
+                    <p>2 publicações</p>
+                    <p>128 seguindo</p>
+                    <p>214 seguidores</p>
                 </div>
 
                 <div class="opcoes_P">
-                    <div class="nomeCompleto_P">
-                        <h1>Marcos Jeeves</h1>
-                    </div> 
-
-                    <div class="sair_P">
-                        <h2>Sair</h2>
-                    </div> 
-                </div>                                 
-            </section>  <!-- Fim das informações do usuário-->
-
-            <div>  <!-- Parte onde mostra as fotos, comentários e curtidas -->
-                <h1>Publicações</h1>    
-            </div>   
-            
-            <div class="pub_P">
-
+                    <p class="nomeCompleto">Marcos Jeeves</p>
+                    <p> <a class="links_P" href="link login"> Sair </a></p>
+                </div>
             </div>
-    </div>   
-    </main> <!-- Fim do Perfil -->
-    
-</body>
-</html>
+
+        </section> <!-- Fim das informações do usuário-->
+
+
+        <!--Início do feed das publicações-->
+        <div class="logoPub_P">
+            <img src="~/img/image 1.svg" alt="Logo de Publicações">
+            <p>Publicações</p>
+        </div>
+
+        <section class="postagens_P">
+            <img class="fotoPubli_P" src="~/img/Rectangle 4.svg" alt="Foto do usuário">
+
+            <div class="mae_P">
+                <div class="infoUser_P">
+                    <img class="imagemp_P" src="~/img/thank-you 4.png" alt="foto do perfil do usuário">
+
+                    <div class="localizacao_P">
+                        <p class="negrito_P">Marco Jeeves</p>
+                        <p class="lugar_P">Rio de Janeiro, Brazil</p>
+                    </div>
+
+                </div>
+
+                <div class="reacoes_P">
+                    <div class="icones_P">
+                        <img src="~/img/Like.svg" alt="curtir a foto do usuário">
+                        <img src="~/img/Vector.svg" alt="comentar foto do usuário">
+                    </div>
+                    <p>1954 curtidas</p>
+                </div>
+
+                <div class="comentarios_P">
+                    <div>
+                        <div class="outrosComent_P">
+                            <p class="usuario_P negrito_P">fausto_silva</p>
+                            <p>Esse cara é fera bixo!!!</p>
+                        </div>
+                        <img src="~/img/Like.svg" alt="coração para curtir a foto do usuário">
+                    </div>
+
+                    <div>
+                        <div class="outrosComent_P">
+                            <p class="usuario_P negrito_P">yes_baby</p>
+                            <p>thank you</p>
+                        </div>
+                        <img src="~/img/Like.svg" alt="coração para curtir a foto do usuário">
+                    </div>
+
+                    <div>
+                        <div class="outrosComent_P">
+                            <p class="usuario_P negrito_P">adriano_stark</p>
+                            <p>Quando eu adormecer, vou sonhar com você.<br>É sempre você.</p>
+                        </div>
+                        <img src="~/img/Like.svg" alt="coração para curtir a foto do usuário">
+                    </div>
+
+                    <div>
+                        <div class="outrosComent_P">
+                            <p class="usuario_P negrito_P">fausto_silva</p>
+                            <p>Yes baby!!!</p>
+                        </div>
+                        <img src="~/img/Like.svg" alt="coração para curtir a foto do usuário">
+                    </div>
+
+                </div>
+                <p class="vertodos_P">Ver todos os 585 comentários</p>
+            </div>
+        </section>
+    </div>
+</main> <!-- Fim do Perfil -->
