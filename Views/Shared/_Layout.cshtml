@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - InstaDev</title>
     <link rel="stylesheet" href="~/css/style.css" />
+    <link rel="stylesheet" href="~/css/feed.css" />
+    <script type="text/javascript" src="~/js/site.js"></script>
 </head>
 <body>
     <header class="topo">
@@ -12,19 +14,19 @@
             <div class="posicaoLogo">
                 <a href="~/Views/Home/index.cshtml"><img src="~/img/Logo.svg" alt="Logo da pagina"></a>
             </div>
-            <div class="pesquisa">
-                <img src="~/img/Pesquisa.svg" alt="Lupa de pesquisa">
-                <input type="text" id="txtPesquisa" placeholder="Pesquisar">
+            <div class="pesquisa">  
+                <input type="text" id="txtPesquisa" class="placeicon" placeholder="&#xf002; Pesquisar">
             </div>
             <div class="links">
                 <a href="~/Views/Home/index.cshtml"><img src="~/img/Home.svg" alt="Feed"></a>
                 <a href="#"><img src="~/img/Direct.svg" alt="Direct"></a>
                 <a href="#"><img src="~/img/Bussula.svg" alt="Bussula"></a>
-                <a href="#"><img src="~/img/Like.svg" alt="Like"></a>
+                <a asp-area="" asp-controller="EdicaoPerfil" asp-action="Index"><img src="~/img/Like.svg" alt="Like"></a>
                 <a href="~/Views/Perfil/index.cshtml"><img src="~/img/Perfil.png" alt="Link para o perfil"></a>
             </div>
         </div>
     </header>
+
 
       
     <div class="container">

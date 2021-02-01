@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Flávia\\Documents\\Técnico\\Projeto-de-Avaliacao_Senai\\Projeto-de-Avaliacao_Senai.csproj",
+      "projectUniqueName": "C:\\Users\\Flávia\\Projeto-de-Avaliacao_Senai\\Projeto-de-Avaliacao_Senai.csproj",
       "projectName": "Projeto-de-Avaliacao_Senai",
-      "projectPath": "C:\\Users\\Flávia\\Documents\\Técnico\\Projeto-de-Avaliacao_Senai\\Projeto-de-Avaliacao_Senai.csproj",
+      "projectPath": "C:\\Users\\Flávia\\Projeto-de-Avaliacao_Senai\\Projeto-de-Avaliacao_Senai.csproj",
       "packagesPath": "C:\\Users\\Flávia\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Flávia\\Documents\\Técnico\\Projeto-de-Avaliacao_Senai\\obj\\",
+      "outputPath": "C:\\Users\\Flávia\\Projeto-de-Avaliacao_Senai\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Flávia\\AppData\\Roaming\\NuGet\\NuGet.Config"
