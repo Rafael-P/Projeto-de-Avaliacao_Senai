@@ -1,105 +1,127 @@
 @{
-    ViewData["Title"] = "Feed";
+  ViewData["Title"] = "Feed";
 }
 
+<header class="topo">
+  <div class="cabecalho">
+    <div class="posicaoLogo">
+      <a asp-area="link para o feed" asp-controller="Feed" asp-action="Index"><img src="~/img/Logo.svg"
+          alt="Logo da pagina"></a>
+    </div>
+    <div class="pesquisa">
+      <input type="text" id="txtPesquisa" class="placeicon" placeholder="&#xf002; Pesquisar">
+    </div>
+    <div class="links">
+      <a asp-area="link para o feed" asp-controller="Feed" asp-action="Index"><img src="~/img/Home.svg" alt="Feed"></a>
+      <a asp-area="" asp-controller="" asp-action=""><img src="~/img/Direct.svg" alt="Direct"></a>
+      <a asp-area="" asp-controller="" asp-action=""><img src="~/img/Bussula.svg" alt="Bussula"></a>
+      <a asp-area="" asp-controller="" asp-action=""><img src="~/img/Like.svg" alt="Like"></a>
+      <a asp-area="link para o perfil" asp-controller="Perfil" asp-action="Index"><img src="~/img/Perfil.png"
+          alt="Link para o perfil"></a>
+    </div>
+  </div>
+</header>
+
 <main class="feed">
-      <div class="conteudo">
-        <article>
+  <div class="conteudo">
+    <article>
 
-          <section class="status">
-            <div>
-                <img src="~/img/vin-diesel.png" alt="Foto de perfil de outro usuário na barra de status"/>
-                <p>vin_diesel</p>
-            </div>
-            <div>
-                <img src="~/img/gabigordo.png" alt="Foto de perfil de outro usuário na barra de status"/>
-                <p>gabigordo</p>
-            </div>
-            <div>
-                <img src="~/img/will_baiano.png" alt="Foto de perfil de outro usuário na barra de status"/>
-                <p>will_baiano</p>
-            </div>
-            <div>
-                <img src="~/img/tony_stark.png" alt="Foto de perfil de outro usuário na barra de status"/>
-                <p>adriano_stark</p>
-            </div>
-            <div>
-                <img src="~/img/pele.png" alt="Foto de perfil de outro usuário na barra de status"/>
-                <p>king_pele</p>
-            </div>
-            <div>
-                <img src="~/img/samuel_rosa.png" alt="Foto de perfil de outro usuário na barra de status"/>
-                <p>samuel_rosa</p>
-            </div>
-            <div>
-                <img src="~/img/chaves_metal.png" alt="Foto de perfil de outro usuário na barra de status"/>
-                <p>chaves_metal</p>
-            </div>
-          </section>
+      <section class="status">
+        <div>
+          <img src="~/img/vin-diesel.png" alt="Foto de perfil de outro usuário na barra de status" />
+          <p>vin_diesel</p>
+        </div>
+        <div>
+          <img src="~/img/gabigordo.png" alt="Foto de perfil de outro usuário na barra de status" />
+          <p>gabigordo</p>
+        </div>
+        <div>
+          <img src="~/img/will_baiano.png" alt="Foto de perfil de outro usuário na barra de status" />
+          <p>will_baiano</p>
+        </div>
+        <div>
+          <img src="~/img/tony_stark.png" alt="Foto de perfil de outro usuário na barra de status" />
+          <p>adriano_stark</p>
+        </div>
+        <div>
+          <img src="~/img/pele.png" alt="Foto de perfil de outro usuário na barra de status" />
+          <p>king_pele</p>
+        </div>
+        <div>
+          <img src="~/img/samuel_rosa.png" alt="Foto de perfil de outro usuário na barra de status" />
+          <p>samuel_rosa</p>
+        </div>
+        <div>
+          <img src="~/img/chaves_metal.png" alt="Foto de perfil de outro usuário na barra de status" />
+          <p>chaves_metal</p>
+        </div>
+      </section>
 
-          <section class="postar">
-            <div class="cabecalho-postar">
-                <img src="~/img/Perfil.png" alt="Foto do proprio perfil"/>
-                <p>Postar</p>
+      <section class="postar">
+        <div class="cabecalho-postar">
+          <img src="~/img/Perfil.png" alt="Foto do proprio perfil" />
+          <p>Postar</p>
+        </div>
+        <div class="corpo-postar">
+          <input type="text" class="corpo-postar-descricao" placeholder="Digite a descrição da imagem..." />
+          <input type="file" id="img-postar" class="corpo-postar-imagem" placeholder="Escolha a imagem" />
+          <label for="img-postar">Escolha a imagem</label>
+          <button type="submit">Postar</button>
+        </div>
+      </section>
+
+      <section class="postagem">
+        <div class="cabecalho-postagem">
+          <img src="~/img/gabigordo.png" alt="Foto de perfil de outra pessoa" />
+          <div class="nome-localizacao">
+            <p class="username">gabigordo</p>
+            <p>Flamengo, RJ</p>
+          </div>
+        </div>
+
+        <img src="~/img/post-gabigordo.png" alt="Post de outro usuario" class="img-postagem">
+
+        <div class="curtidas-comentarios">
+
+          <div class="postagem-inserir">
+            <div class="f-like">
+              <label for="amei"><input type="checkbox" class="love-input" onclick="like();" id="amei"><img
+                  src="~/img/Like.svg" alt="Amei" id="alterar-icone"></label>
             </div>
-            <div class="corpo-postar">
-                <input type="text" class="corpo-postar-descricao" placeholder="Digite a descrição da imagem..."/>
-                <input type="file" id="img-postar" class="corpo-postar-imagem" placeholder="Escolha a imagem"/>
-                <label for="img-postar">Escolha a imagem</label> 
-                <button type="submit">Postar</button>
+            <label for="icon-comentario" class="icone-comentario"><img src="~/img/Comentario.svg"
+                alt="Icone de comentário"></label>
+            <input type="text" id="icon-comentario" class="fazer-comentario" placeholder="Comentar..." />
+          </div>
+
+          <p>2077 curtidas</p>
+
+          <div class="postagem-mostrar">
+            <div class="postagem-comentario">
+              <p class="p-username username">gabigordo</p>
+              <p class="p-comentario"><span>#flamengo</span> Amo vocês mil milhões</p>
             </div>
-          </section>
-
-          <section class="postagem">
-            <div class="cabecalho-postagem">
-              <img src="~/img/gabigordo.png" alt="Foto de perfil de outra pessoa"/>
-              <div class="nome-localizacao">
-                <p class="username">gabigordo</p>
-                <p>Flamengo, RJ</p>
-              </div>
+            <div class="postagem-comentario">
+              <p class="p-username username">yes_baby</p>
+              <p class="p-comentario">thank you</p>
             </div>
-
-              <img src="~/img/post-gabigordo.png" alt="Post de outro usuario" class="img-postagem">
-
-            <div class="curtidas-comentarios">
-
-              <div class="postagem-inserir">
-                <div class="f-like">
-                  <label for="amei"><input type="checkbox" class="love-input" onclick="like();" id="amei"><img src="~/img/Like.svg" alt="Amei" id="alterar-icone"></label>
-                </div>
-                <label for="icon-comentario" class="icone-comentario"><img src="~/img/Comentario.svg" alt="Icone de comentário"></label> 
-                <input type="text" id="icon-comentario" class="fazer-comentario" placeholder="Comentar..."/>
-              </div>
-
-              <p>2077 curtidas</p>
-
-              <div class="postagem-mostrar">
-                <div class="postagem-comentario">
-                  <p class="p-username username">gabigordo</p>
-                  <p class="p-comentario"><span>#flamengo</span> Amo vocês mil milhões</p>
-                </div>
-                <div class="postagem-comentario">
-                  <p class="p-username username">yes_baby</p>
-                  <p class="p-comentario">thank you</p>
-                </div>
-                <div class="postagem-comentario">
-                  <p class="p-username username">king_pele</p>
-                  <p class="p-comentario">Esses são bons de bola, entende?</p>
-                </div>
-              </div>
-
+            <div class="postagem-comentario">
+              <p class="p-username username">king_pele</p>
+              <p class="p-comentario">Esses são bons de bola, entende?</p>
             </div>
-          </section>
+          </div>
 
-        </article>
-        <aside>
-            <div class="perfil">
-              <img src="./img/Perfil-2.png" alt="Foto do próprio perfil">
-              <div class="F-nomes">
-                <p class="username">yes_baby</p>
-                <p>Marcos Jeeves</p>
-              </div>
-            </div>
-        </aside>
+        </div>
+      </section>
+
+    </article>
+    <aside>
+      <div class="perfil">
+        <img src="./img/Perfil-2.png" alt="Foto do próprio perfil">
+        <div class="F-nomes">
+          <p class="username">yes_baby</p>
+          <p>Marcos Jeeves</p>
+        </div>
       </div>
-    </main>
+    </aside>
+  </div>
+</main>

@@ -6,8 +6,6 @@ namespace Projeto_de_Avaliacao_Senai.Models
     public class InstaBase
     {
         
-<<<<<<< HEAD
-=======
         public void CreateFolderAndFile(string _path)
         {
             // DataBase/Equipe
@@ -60,6 +58,5 @@ namespace Projeto_de_Avaliacao_Senai.Models
 
 
 
->>>>>>> page/edicao
     }
 }
