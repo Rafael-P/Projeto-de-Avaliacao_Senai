@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using Projeto_de_Avaliacao_Senai.Interfaces;
 
 namespace Projeto_de_Avaliacao_Senai.Models
@@ -15,6 +16,25 @@ namespace Projeto_de_Avaliacao_Senai.Models
         public string Name { get; set; }
         public string Username { get; set; }
         public string Senha { get; set; }
-        
+
+        public void Create(Usuario u)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Delete(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Usuario> ReadAll()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Update(Usuario u)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
