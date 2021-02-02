@@ -1,0 +1,111 @@
+:root{
+    --backgroun:#F8F8F8;
+    --Letra1: #909090;
+    --Botao: #2686CC;
+    --Obtenha:#353535;
+    --Branco:#FFFFFF;
+    --Letra2:#AFAFAF;
+}
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body{
+    background-color: #f8f8f8;
+    margin: 0px;
+}
+.estrutura{
+    border:  1px solid #DCDCDC;
+   width: 342px;
+   height: 380px;
+   background: var(--Branco);
+   margin: 10% auto 0 auto;
+   padding: 30px;
+   background: var(--Branco);
+   flex-direction: column;
+   align-items: center;
+   justify-content: space-between;
+   display: flex;
+  
+}
+
+.estrutura img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 35px;
+    margin-bottom: 30px;
+}
+.inputs{
+    font-size:11px;
+    margin: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 2px;
+    border-width: 1px;
+    color: var(--Letra2);
+    align-items: center;
+    width: 267px;
+    border: 1px solid #DCDCDC;
+    height: 35px;
+    background-color: var(--background);
+    padding-left: 10px;
+}
+.botao{
+    font-size:12px;
+    background-color: var(--Botao);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 2px;
+    width: 280px;
+    height: 35px;
+    color: var(--Branco);
+    border: 1px solid #DCDCDC;
+}
+.separador{
+    display: flex;
+    height: 50px;
+    align-items: center;
+    color: var(--Letra1);
+}
+.separador p{
+    margin: 0 20px;
+    
+}
+.separador hr{
+    color: var(--Letra2);
+    width: 100px;
+    
+}
+a{
+    font-size: 12px;
+    text-decoration: none;
+    color: var(--Botao);
+}
+.estrutura2{
+    border:  1px solid #DCDCDC;
+
+    width: 400px;
+    height: 75px;
+    background: var(--Branco);
+    margin: 1% auto 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;  
+    
+}
+.aplicativo {
+    width: 400px;
+    height: 75px;
+    display: flex;
+    margin: 1% auto 0 auto;
+    font-size: 12px;
+    align-items: center;
+    flex-direction: column;
+}
+.p{
+    margin: 2% auto 0 auto;
+}
+
