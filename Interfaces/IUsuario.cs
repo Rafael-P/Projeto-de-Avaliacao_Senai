@@ -5,13 +5,13 @@ namespace Projeto_de_Avaliacao_Senai.Interfaces
 {
     public interface IUsuario
     {
-        void Create(Usuario u);
-
-        List<Usuario> ReadAll();
-
-        void Update(Usuario u);
-
-        void Delete(int id);
+         void CadastrarUsuario(Usuario u);     
+        Usuario MostrarUsuario(int id);    
+        void EditarUsuario(Usuario u);               
+        void DeletarUsuario(int id);
+        List<Usuario> ListarUsuario();          
+        
+        void Seguir(int id);  
        
     }
 }
