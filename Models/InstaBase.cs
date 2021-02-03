@@ -5,23 +5,21 @@ namespace Projeto_de_Avaliacao_Senai.Models
 {
     public class InstaBase
     {
-        
+
         public void CreateFolderAndFile(string _path)
-        {
-            // DataBase/Equipe
+        {   
             string folder = _path.Split("/")[0];
 
-            if(!Directory.Exists(folder))
+            if (!Directory.Exists(folder))
             {
                 Directory.CreateDirectory(folder);
             }
 
-            if(!File.Exists(_path))
+            if (!File.Exists(_path))
             {
                 File.Create(_path);
             }
         }
-
 
         public List<string> ReadAllLinesCSV(string path)
         {
@@ -29,7 +27,7 @@ namespace Projeto_de_Avaliacao_Senai.Models
 
             //using é responsavel por abrir e fechar o arquivo automaticamente 
             //StreamReader -> ler dados de um arquivo
-            using(StreamReader file = new StreamReader(path))
+            using (StreamReader file = new StreamReader(path))
             {
                 string linha;
 
@@ -43,11 +41,11 @@ namespace Projeto_de_Avaliacao_Senai.Models
             return linhas;
         }
 
-
+        /*
         public void RewriteCSV(string path, List<string> linhas)
         {
             //StreamWriter -> escrever dados em um arquivo
-            using(StreamWriter output = new StreamWriter(path))
+            using (StreamWriter output = new StreamWriter(path))
             {
                 foreach (var item in linhas)
                 {
@@ -55,8 +53,10 @@ namespace Projeto_de_Avaliacao_Senai.Models
                 }
             }
         }
+        */
 
 
 
+        
     }
 }
