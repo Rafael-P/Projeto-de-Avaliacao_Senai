@@ -20,9 +20,8 @@ namespace Projeto_de_Avaliacao_Senai.Models
         }
 
 
-        /*São só esses elementos?*/
         public string Prepare(Publicacao p){
-            return $"{p.IdPublicacao};{p.Imagem};{p.Legenda};";
+            return $"{p.IdPublicacao};{p.Imagem};{p.Legenda};{p.IdUsuario};{p.Likes}";
         }
         
         public void CriarPublicacao(Publicacao p)
@@ -35,7 +34,8 @@ namespace Projeto_de_Avaliacao_Senai.Models
         
         public List<Publicacao> ListarPublicacoes()
         {
-            List<Publicacao> publicacao = new List<Publicacao>();
+            
+            List<Publicacao> publicacoes = new List<Publicacao>();
 
             /*Array para ler todas a linhas od CSV*/
             string[] linhas = File.ReadAllLines(PATH);
@@ -49,11 +49,13 @@ namespace Projeto_de_Avaliacao_Senai.Models
                 novaPublicacao.IdPublicacao = int.Parse(linha[0]);
                 novaPublicacao.Imagem = linha[1];
                 novaPublicacao.Legenda = linha[2];
+                novaPublicacao.IdUsuario = int.Parse(linha[3]);
+                novaPublicacao.Likes = int.Parse(linha[4]);
 
-                publicacao.Add(novaPublicacao);
+                publicacoes.Add(novaPublicacao);
             }
 
-            return publicacao;
+            return publicacoes;
         }
         public void EditarPublicacao(Publicacao p)
         {

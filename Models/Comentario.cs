@@ -18,9 +18,9 @@ namespace Projeto_de_Avaliacao_Senai.Models
             CreateFolderAndFile(PATH);
         }
 
-        /*São só esses elementos?*/
+    
         public string Prepare(Comentario c){
-            return $"{c.IdComentario};{c.Mensagem};";
+            return $"{c.IdComentario};{c.Mensagem};{c.IdUsuario};{c.IdPublicacao}";
         }
 
         public void CriarComentario(Comentario c)
@@ -33,7 +33,8 @@ namespace Projeto_de_Avaliacao_Senai.Models
 
         public List<Comentario> ListarComentarios()
         {
-            List<Comentario> comentario = new List<Comentario>();
+            
+            List<Comentario> comentarios = new List<Comentario>();
 
             /*Array para ler todas a linhas od CSV*/
             string[] linhas = File.ReadAllLines(PATH);
@@ -46,11 +47,13 @@ namespace Projeto_de_Avaliacao_Senai.Models
 
                 novoComentario.IdComentario = int.Parse(linha[0]);
                 novoComentario.Mensagem = linha[1];
-                
-                comentario.Add(novoComentario);
+                novoComentario.IdUsuario = int.Parse(linha[2]);
+                novoComentario.IdPublicacao = int.Parse(linha[3]);
+            
+                comentarios.Add(novoComentario);
             }
 
-            return comentario;
+            return comentarios;
         }
 
         public void EditarComentario(Comentario c)
