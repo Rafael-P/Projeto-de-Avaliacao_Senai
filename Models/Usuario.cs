@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
 using Projeto_de_Avaliacao_Senai.Interfaces;
 
 namespace Projeto_de_Avaliacao_Senai.Models
@@ -36,5 +37,27 @@ namespace Projeto_de_Avaliacao_Senai.Models
         {
             throw new NotImplementedException();
         }
+
+        //Perfil
+        public List<Usuario> MostrarUsuario(int id) 
+        {
+            List<Usuario> usuarios = new List<Usuario>();
+            string[] linhas = File.ReadAllLines(PATH);
+            
+            foreach (var item in linhas)
+            {
+                string [] linha = item.Split(";");
+
+                Usuario usuario   = new Usuario();
+                usuario.IdUsuario = linha[];
+                usuario.Nome      = linha[];
+                usuario.Foto      = linha[];
+                usuario.Seguidos  = linha[];
+                
+            }
+            return usuarios;
+        }
+
+
     }
 }
