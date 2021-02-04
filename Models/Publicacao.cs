@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.IO;
 using Projeto_de_Avaliacao_Senai.Interfaces;
 
 namespace Projeto_de_Avaliacao_Senai.Models
@@ -19,29 +20,58 @@ namespace Projeto_de_Avaliacao_Senai.Models
         }
 
 
+        /*São só esses elementos?*/
+        public string Prepare(Publicacao p){
+            return $"{p.IdPublicacao};{p.Imagem};{p.Legenda};";
+        }
+        
         public void CriarPublicacao(Publicacao p)
         {
-            throw new System.NotImplementedException();
-        }
-
-        public void Curtir(int id)
+            /*Foi preparado um array de string para armazenar o Prepare*/
+            string[] linhas = {Prepare(p)};
+            /*Acrecentamos uma nova linha na PATH*/
+            File.AppendAllLines(PATH, linhas);
+        }        
+        
+        public List<Publicacao> ListarPublicacoes()
         {
-            throw new System.NotImplementedException();
-        }
+            List<Publicacao> publicacao = new List<Publicacao>();
 
+            /*Array para ler todas a linhas od CSV*/
+            string[] linhas = File.ReadAllLines(PATH);
+
+            foreach(string item in linhas)
+            {
+                string[] linha = item.Split(";");
+
+                Publicacao novaPublicacao = new Publicacao();
+
+                novaPublicacao.IdPublicacao = int.Parse(linha[0]);
+                novaPublicacao.Imagem = linha[1];
+                novaPublicacao.Legenda = linha[2];
+
+                publicacao.Add(novaPublicacao);
+            }
+
+            return publicacao;
+        }
         public void EditarPublicacao(Publicacao p)
         {
             throw new System.NotImplementedException();
         }
-
         public void ExcluirPublicao(int id)
         {
             throw new System.NotImplementedException();
         }
 
-        public List<Publicacao> ListarPublicacoes()
+    
+        public void Curtir(int id)
         {
             throw new System.NotImplementedException();
         }
+
+
+
+
     }
 }

@@ -41,7 +41,7 @@ namespace Projeto_de_Avaliacao_Senai.Models
             return linhas;
         }
 
-        /*
+        
         public void RewriteCSV(string path, List<string> linhas)
         {
             //StreamWriter -> escrever dados em um arquivo
@@ -53,7 +53,7 @@ namespace Projeto_de_Avaliacao_Senai.Models
                 }
             }
         }
-        */
+        
 
 
 
