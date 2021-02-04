@@ -61,11 +61,13 @@ namespace Projeto_de_Avaliacao_Senai.Models
                 string[] linha = item.Split(";");
                 Usuario usuario = new Usuario();
                 usuario.IdUsuario = Int32.Parse(linha[0]);
-                usuario.Email = linha[1];
-                usuario.DataNascimento = DateTime.Parse(linha[2]);
-                usuario.Nome = linha[3];
-                usuario.Username = linha[4];
-                usuario.Senha = linha[5];
+                usuario.Nome = linha[1];
+                usuario.Foto = linha[2];
+                usuario.DataNascimento = DateTime.Parse(linha[3]);
+                usuario.Seguidos = Int32.Parse(linha[4]);
+                usuario.Email = linha[5];
+                usuario.Username = linha[6];
+                usuario.Senha = linha[7];
                 
             }
             return usuarios;
@@ -94,8 +96,9 @@ namespace Projeto_de_Avaliacao_Senai.Models
 
             usuarioBuscado.IdUsuario = int.Parse(UsuarioLinha[0]);
             usuarioBuscado.Nome = UsuarioLinha[1];
-            usuarioBuscado.Email= UsuarioLinha[2];
-            usuarioBuscado.Senha = UsuarioLinha[3];
+            usuarioBuscado.Email= UsuarioLinha[5];
+            usuarioBuscado.Senha = UsuarioLinha[7];
+            usuarioBuscado.DataNascimento = DateTime.Parse(UsuarioLinha[3]);
 
             //Retorno dos usuários encontradas 
             return usuarioBuscado;
