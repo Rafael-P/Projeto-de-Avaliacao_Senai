@@ -1,6 +1,8 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 using Projeto_de_Avaliacao_Senai.Interfaces;
 
 namespace Projeto_de_Avaliacao_Senai.Models
@@ -16,6 +18,7 @@ namespace Projeto_de_Avaliacao_Senai.Models
         public string Email { get; set; }
         public string Username { get; set; }
         public string Senha { get; set; }
+        [TempData] public string Mensagem { get; set; }
 
         private const string PATH = "Database/Usuario.csv";
         public Usuario()
@@ -30,7 +33,6 @@ namespace Projeto_de_Avaliacao_Senai.Models
 
         public void CadastrarUsuario(Usuario u)
         {
-            
             string[] linha = {Prepare(u)};
             File.AppendAllLines(PATH, linha);
         }
@@ -73,5 +75,36 @@ namespace Projeto_de_Avaliacao_Senai.Models
         {
             throw new NotImplementedException();
         }
+
+        public Usuario Logar(string email, string senha)
+        {
+            //Leitura de todos os arquivos CSV
+            List<string> csv = ReadAllLinesCSV("Database/Usuario.csv");
+
+            // Verificação das informações passadas na lista de string
+            var linhaCSV = csv.Find(
+            x => 
+            x.Split(";")[2] == email && 
+            x.Split(";")[3] == senha
+            );
+
+            string[] UsuarioLinha = linhaCSV.Split(";");
+
+            Usuario usuarioBuscado = new Usuario();
+
+            usuarioBuscado.IdUsuario = int.Parse(UsuarioLinha[0]);
+            usuarioBuscado.Nome = UsuarioLinha[1];
+            usuarioBuscado.Email= UsuarioLinha[2];
+            usuarioBuscado.Senha = UsuarioLinha[3];
+
+            //Retorno dos usuários encontradas 
+            return usuarioBuscado;
+            
+}
+
+        
     }
+
+        
+    
 }

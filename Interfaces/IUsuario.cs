@@ -10,7 +10,6 @@ namespace Projeto_de_Avaliacao_Senai.Interfaces
         void EditarUsuario(Usuario u);               
         void DeletarUsuario(int id);
         List<Usuario> ListarUsuario();          
-        
         void Seguir(int id);  
        
     }
