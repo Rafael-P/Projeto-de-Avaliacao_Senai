@@ -36,10 +36,12 @@ namespace Projeto_de_Avaliacao_Senai.Controllers
                 x.Split(";")[7] == form["Senha"]
             );
 
+            
 
             // Redirecionamos o usuário logado caso encontrado
             if(logado != null)
             {
+                HttpContext.Session.SetString("IdLogado", logado.Split(";")[0]);
                 return LocalRedirect("~/Perfil");
             }
 
