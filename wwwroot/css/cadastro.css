@@ -13,7 +13,7 @@
 }
 
 body{
-    max-width: 1200px;
+    width: 1200px;
     height: 1024px;
     background: var(--background);
     
@@ -21,7 +21,7 @@ body{
 
 
 
-.estrutura{
+.c-estrutura{
     position: absolute;
     background: #FFFFFF ;
     width: 342px;
@@ -29,13 +29,11 @@ body{
     left: 630px;
     top: 130px;
     border: 1px solid #DCDCDC;
-    align-items: center;
-    justify-content: center;
 
 }
 
-.estrutura img{
-    margin-bottom: -8px;
+.c-estrutura img{
+    margin-bottom: 20px;
     margin-top: 20px ;
     display: block;
     margin-left: auto;
@@ -43,14 +41,14 @@ body{
       
 }
 
-.estrutura p{
+.c-estrutura p{
     text-align: center;
     color: var(--Letra1);
     font-family: Segoe UI;
 }
 
 
-.inputs{
+.c-inputs{
     font-size:11px;
     margin: 10px;
     display: block;
@@ -67,48 +65,52 @@ body{
     background-color: var(--background);
 }
 
-#input1{
+#c-input1{
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 6px;
+    margin-bottom: 8px;
 }
 
 
-.datas p{
+.c-datas p{
     font-family: Segoe UI;
     font-size:11px;
     margin: 2px;
-    margin-left: auto;
+    margin-left: 3px;
     margin-right: 202px;
-    color: #868858;
+    color: #727272;
 }
 
-.datas{
+.c-datas{
     position: unset;
     margin-left: 33px;
     margin-right: auto;
     
     
 }
-.datas select{
-    
+.c-datas select{
+    align-items: center;
     font-size:12px;
     background-color: var(--background);
     top:10px;
     border-radius: 2px;
-    width: 88px;
-    height: 35px;
+    width: 83px;
+    height: 34px;
     font-family: Segoe UI;
-    color:#868585;
+    color:var(--Letra1);
     border: 1px solid #DCDCDC;
-    align-items: center;
-    margin-left:30px;
+    margin-left: 10px;
     margin: 1px;
-    margin-right: auto;
+    margin-right: 4px;
+
 
 }
 
-.botao{
+#dia{
+    margin-left: 3px;
+}
+
+.c-botao{
     margin: 20px;
     font-size:12px;
     background-color: var(--Botão);
@@ -126,7 +128,7 @@ body{
     
 }
 
-#pf{
+#c-pf{
     color: var(--Letra1) ;
     font-size: 12px;
     font-family: Segoe UI;
@@ -134,7 +136,7 @@ body{
     
 }
 
-.estrutura2{
+.c-estrutura2{
     position: absolute;
     width: 342px;
     height: 75px;
@@ -146,20 +148,20 @@ body{
     border: 1px solid #DCDCDC;
 }
 
-.estrutura2 p {
+.c-estrutura2 p {
     font-size: 12px;
     color: #000000 ;
     font-family: Segoe UI ;
 }
 
-.estrutura2 a {
+.c-estrutura2 a {
     font-family: Segoe UI;
     font-size: 12px;
     color: var(--Botão) ;
     text-decoration: none;
 }
 
-#po{
+.c-foo p{
     font-size: 12px;
     color: #000000;
     font-family: Segoe UI ;
@@ -168,14 +170,14 @@ body{
     margin-bottom:10px ;
 }
 
-#loja{
+#c-loja{
     position: absolute;
     display: flex;
     margin: 1px;
     margin-left:25px ;
 }
 
-#loja1{
+#c-loja1{
     position: absolute;
     display: flex;
     margin: 1px;
