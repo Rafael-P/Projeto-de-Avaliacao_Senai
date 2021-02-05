@@ -32,8 +32,8 @@ namespace Projeto_de_Avaliacao_Senai.Controllers
             var logado = 
             csv.Find(
                 x => 
-                x.Split(";")[2] == form["Email"] && 
-                x.Split(";")[3] == form["Senha"]
+                x.Split(";")[5] == form["Email"] && 
+                x.Split(";")[7] == form["Senha"]
             );
 
 
