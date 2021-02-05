@@ -12,9 +12,8 @@
     --font: 'Segoe UI';
 }
 
-body{
-    width: 1200px;
-    height: 1024px;
+
+.c-body{
     background: var(--background);
     
 }
@@ -25,7 +24,7 @@ body{
     position: absolute;
     background: #FFFFFF ;
     width: 342px;
-    height: 519px;
+    height: 550px;
     left: 630px;
     top: 130px;
     border: 1px solid #DCDCDC;
@@ -34,7 +33,7 @@ body{
 
 .c-estrutura img{
     margin-bottom: 20px;
-    margin-top: 20px ;
+    margin-top: 40px ;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -50,7 +49,7 @@ body{
 
 .c-inputs{
     font-size:11px;
-    margin: 10px;
+    margin: 10px auto;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -63,6 +62,8 @@ body{
     border: 1px solid #DCDCDC;
     height: 35px;
     background-color: var(--background);
+    padding-left: 07px;
+    outline: none;
 }
 
 #c-input1{
@@ -76,14 +77,15 @@ body{
     font-family: Segoe UI;
     font-size:11px;
     margin: 2px;
-    margin-left: 3px;
+    margin-left: -41.1px;
     margin-right: 202px;
     color: #727272;
+    width: 200px;
 }
 
 .c-datas{
     position: unset;
-    margin-left: 33px;
+    margin-left: 34px;
     margin-right: auto;
     
     
@@ -141,7 +143,7 @@ body{
     width: 342px;
     height: 75px;
     display: flex;
-    top: 540px;
+    top: 560px;
     background-color: var(--Branco);
     align-items: center;
     justify-content: center;
@@ -166,7 +168,7 @@ body{
     color: #000000;
     font-family: Segoe UI ;
     height: 16px;
-    margin-top: 150px;
+    margin-top: 160px;
     margin-bottom:10px ;
 }
 
@@ -175,6 +177,7 @@ body{
     display: flex;
     margin: 1px;
     margin-left:25px ;
+    padding-bottom: 180px;
 }
 
 #c-loja1{
@@ -182,6 +185,7 @@ body{
     display: flex;
     margin: 1px;
     margin-left:165px ;
+    padding-bottom: 180px;
 }
 
 

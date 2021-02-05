@@ -13,7 +13,7 @@ namespace Projeto_de_Avaliacao_Senai.Controllers
 
         public IActionResult Index(){
             /*Foi listados todas as equipes e enviados para View, atráves da ViewBag*/
-            ViewBag.Usuarios = usuarioModel.ReadAll();
+            ViewBag.Usuarios = usuarioModel.ListarUsuario();
             ViewBag.Postagem = publicacaoModel.ReadAll();
             return View();
             

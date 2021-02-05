@@ -134,6 +134,7 @@ namespace Projeto_de_Avaliacao_Senai.Models
                 usuario.Username = linha[6];
                 usuario.Senha = linha[7];
                 
+                usuarios.Add(usuario);
             }
             return usuarios;
         }
