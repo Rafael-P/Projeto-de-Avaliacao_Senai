@@ -1,6 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
+using Projeto_de_Avaliacao_Senai.Models;
 
 namespace Projeto_de_Avaliacao_Senai.Controllers
 {
@@ -11,7 +10,7 @@ namespace Projeto_de_Avaliacao_Senai.Controllers
 
         public IActionResult Index()    
         {
-            ViewBag.Usuario = usuarioModel.Readall();
+            ViewBag.Usuario = usuarioModel.ReadAll();
             return View();
         }
 

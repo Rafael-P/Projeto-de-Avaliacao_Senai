@@ -47,13 +47,28 @@ namespace Projeto_de_Avaliacao_Senai.Models
                 string [] linha = item.Split(";");
 
                 Usuario usuario   = new Usuario();
-                u.IdUsuario       = int.Parse (linha[0]);
-                u.Foto            = linha[1];
-                u.Nome            = linha[2];
-                u.Seguidos        = int32.Parse (linha[3]);
-                u.Username        = linha[4];
+                usuario.IdUsuario       = int.Parse (linha[0]);
+                usuario.Foto            = linha[1];
+                usuario.Nome            = linha[2];
+                usuario.Seguidos        = Int32.Parse (linha[3]);
+                usuario.Username        = linha[4];
             }
             return usuarios;
+        }
+
+        public List<Usuario> ReadAll()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Update(Usuario u)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Delete(int id)
+        {
+            throw new NotImplementedException();
         }
     }
 }
