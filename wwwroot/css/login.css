@@ -78,6 +78,11 @@ a{
     text-decoration: none;
     color: var(--Botao);
 }
+
+.lo-estrutura a{
+    align-items: center;
+}
+
 .lo-estrutura2{
     border:  1px solid #DCDCDC;
     width: 342px;
@@ -90,6 +95,11 @@ a{
     font-size: 12px;  
     
 }
+
+.lo-esq a{
+    margin-left: 85px;
+}
+
 .lo-aplicativo {
     width: 400px;
     height: 75px;
@@ -99,11 +109,12 @@ a{
     align-items: center;
     flex-direction: column;
 }
-.p{
+.lo-p{
     margin: 2% auto 0 auto;
+    margin-bottom: 10px;
 }
 
-lo-erro{
+.lo-erro{
     font-size: 11px;
     color: red;
     font-family: Segoe UI ;
