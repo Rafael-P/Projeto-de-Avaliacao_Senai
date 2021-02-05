@@ -71,6 +71,9 @@
       </section>
 
       <section class="postagem">
+
+        @foreach(Publicacao publicacao in ViewBag.Feed){  
+
         <div class="cabecalho-postagem">
           <img src="~/img/gabigordo.png" alt="Foto de perfil de outra pessoa" />
           <div class="nome-localizacao">
@@ -111,6 +114,8 @@
           </div>
 
         </div>
+
+        }
       </section>
 
     </article>

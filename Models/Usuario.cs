@@ -17,6 +17,11 @@ namespace Projeto_de_Avaliacao_Senai.Models
         public string Username { get; set; }
         public string Senha { get; set; }
 
+
+        internal dynamic ReadAll()
+        {
+            throw new NotImplementedException();
+        }
         public void CadastrarUsuario(Usuario u)
         {
             throw new NotImplementedException();
