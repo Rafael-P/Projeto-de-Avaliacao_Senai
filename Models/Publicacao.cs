@@ -21,7 +21,8 @@ namespace Projeto_de_Avaliacao_Senai.Models
 
         /*Este PATH é criado para dar um nome ao Folder e File, sendo assim possível chamar o método que está na superclasse para cria-los*/
         private const string PATH = "Database/Publicacao.csv";
-        public Publicacao(){
+        public Publicacao()
+        {
             CreateFolderAndFile(PATH);
         }
 

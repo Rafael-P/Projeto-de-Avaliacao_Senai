@@ -48,17 +48,6 @@ namespace Projeto_de_Avaliacao_Senai.Models
             //remove a linha que tiver o id igual ao comparado
             linhas.RemoveAll( x => x.Split(";")[0] == IdUsuario.ToString() );
         }
-
-        // public List<Usuario> ListarUsuario()
-        // {
-            
-        //     List<string> linhas = ReadAllLinesCSV(PATH);
-        //     linhas.RemoveAll( x => x.Split(";")[0] == u.IdUsuario.ToString() );
-        //     linhas.Add( Prepare(u) );
-        //     RewriteCSV(PATH, linhas);
-
-        // }
-
         public void EditarUsuario(Usuario u)
         {
             
@@ -88,34 +77,28 @@ namespace Projeto_de_Avaliacao_Senai.Models
         // }
         
         //Perfil
-        public List<Usuario> MostrarUsuario(int id) 
+        public Usuario MostrarUsuario(int id) 
         {
-            List<Usuario> usuarios = new List<Usuario>();
-            string[] linhas = File.ReadAllLines(PATH);
+            // int id -> o id da pessoa logada
             
-            foreach (var item in linhas)
-            {
-                string [] linha = item.Split(";");
+            // procurar a pessoa pelo id
 
-                Usuario usuario   = new Usuario();
-                usuario.IdUsuario       = int.Parse (linha[0]);
+            // trazer do csv, a linha inteira da pessoa 
+
+            List<string> linhas = ReadAllLinesCSV(PATH); //pega todas as linhas do csv
+
+            string informacoes = linhas.Find (x => x.Split(";") [0] == id.ToString() );  //procurando o usuário -> resposta: 2;Foto.png;Kemilly;5000;Kemillyalgumacoisa
+
+            string[] linha = informacoes.Split(";"); //separa os itens
+
+              Usuario usuario   = new Usuario();
                 usuario.Foto            = linha[1];
                 usuario.Nome            = linha[2];
                 usuario.Seguidos        = Int32.Parse (linha[3]);
                 usuario.Username        = linha[4];
-            }
-            return usuarios;
+            
+            return usuario; // -> retornar um usuário buscado
         }
-
-        // public string Prepare(Usuario u)
-        // {
-        //     throw new NotImplementedException();
-        // }
-
-        // public void Seguir(int id)
-        // {
-        //     throw new NotImplementedException();
-        // }
 
         public List<Usuario> ListarUsuario()
         {
@@ -124,6 +107,7 @@ namespace Projeto_de_Avaliacao_Senai.Models
             foreach (var item in linhas)
             {
                 string[] linha = item.Split(";");
+
                 Usuario usuario = new Usuario();
                 usuario.IdUsuario = Int32.Parse(linha[0]);
                 usuario.Nome = linha[1];
@@ -167,14 +151,6 @@ namespace Projeto_de_Avaliacao_Senai.Models
 
             //Retorno dos usuários encontradas 
             return usuarioBuscado;
-        }
-
-        Usuario IUsuario.MostrarUsuario(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-
-        
+        }   
     }
 }
