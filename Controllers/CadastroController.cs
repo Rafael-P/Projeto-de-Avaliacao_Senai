@@ -15,6 +15,7 @@ namespace Projeto_de_Avaliacao_Senai.Controllers
             ViewBag.Usuarios = usuarioModel.ListarUsuario();
             return View();
         }
+
         public IActionResult Cadastrar(IFormCollection form)
         {
             Random numeroID = new Random();
@@ -38,5 +39,7 @@ namespace Projeto_de_Avaliacao_Senai.Controllers
 
             return LocalRedirect("~/Feed");
         }
+
+        
     }
 }

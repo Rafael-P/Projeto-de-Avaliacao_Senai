@@ -47,6 +47,7 @@ namespace Projeto_de_Avaliacao_Senai.Models
 
             //remove a linha que tiver o id igual ao comparado
             linhas.RemoveAll( x => x.Split(";")[0] == IdUsuario.ToString() );
+        }
 
         public List<Usuario> ListarUsuario()
         {
@@ -168,10 +169,12 @@ namespace Projeto_de_Avaliacao_Senai.Models
             return usuarioBuscado;
         }
 
-        
+        Usuario IUsuario.MostrarUsuario(int id)
+        {
+            throw new NotImplementedException();
         }
 
+
         
-    
     }
 }
