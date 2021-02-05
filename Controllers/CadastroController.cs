@@ -38,7 +38,7 @@ namespace Projeto_de_Avaliacao_Senai.Controllers
             usuarioModel.CadastrarUsuario(novoUsuario);            
             ViewBag.Usuarios = usuarioModel.ListarUsuario();
 
-            return LocalRedirect("~/Feed");
+            return LocalRedirect("~/Perfil ");
         }
 
         

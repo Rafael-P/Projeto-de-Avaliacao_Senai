@@ -6,7 +6,7 @@ using Projeto_de_Avaliacao_Senai.Models;
 namespace Projeto_de_Avaliacao_Senai.Controllers
 {
 
-    [Route("Login")]
+    // [Route("Login")]
     public class LoginController : Controller
     {
         
@@ -40,11 +40,11 @@ namespace Projeto_de_Avaliacao_Senai.Controllers
             // Redirecionamos o usuário logado caso encontrado
             if(logado != null)
             {
-                return LocalRedirect("~/");
+                return LocalRedirect("~/Perfil");
             }
 
             Mensagem = "Dados incorretos, tente novamente...";
-            return LocalRedirect("~/Login");
+            return LocalRedirect("~/");
 
             }
     }
