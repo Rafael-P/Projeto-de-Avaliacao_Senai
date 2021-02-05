@@ -49,15 +49,15 @@ namespace Projeto_de_Avaliacao_Senai.Models
             linhas.RemoveAll( x => x.Split(";")[0] == IdUsuario.ToString() );
         }
 
-        public List<Usuario> ListarUsuario()
-        {
+        // public List<Usuario> ListarUsuario()
+        // {
             
-            List<string> linhas = ReadAllLinesCSV(PATH);
-            linhas.RemoveAll( x => x.Split(";")[0] == u.IdUsuario.ToString() );
-            linhas.Add( Prepare(u) );
-            RewriteCSV(PATH, linhas);
+        //     List<string> linhas = ReadAllLinesCSV(PATH);
+        //     linhas.RemoveAll( x => x.Split(";")[0] == u.IdUsuario.ToString() );
+        //     linhas.Add( Prepare(u) );
+        //     RewriteCSV(PATH, linhas);
 
-        }
+        // }
 
         public void EditarUsuario(Usuario u)
         {
@@ -69,23 +69,23 @@ namespace Projeto_de_Avaliacao_Senai.Models
 
         }
 
-        public Usuario Logar(string email, string senha)
-        {
-            throw new NotImplementedException();
-        }
+        // public Usuario Logar(string email, string senha)
+        // {
+        //     throw new NotImplementedException();
+        // }
 
        /*Abaixo será criado um metódo para preparar a linha do CSV*/
-        public string Prepare(Usuario u)
-        {
-            /*Aqui vamos retornar todos as "caracteristicas" necessarias para criar um usuario para colocar no csv*/
-            return $"{u.IdUsuario};{u.Foto};{u.Nome};{u.Seguidos};{u.Username}";
-        }
+        // public string Prepare(Usuario u)
+        // {
+        //     /*Aqui vamos retornar todos as "caracteristicas" necessarias para criar um usuario para colocar no csv*/
+        //     return $"{u.IdUsuario};{u.Foto};{u.Nome};{u.Seguidos};{u.Username}";
+        // }
 
-        public void CadastrarUsuario(Usuario u)
-        {
-            string[] linha = {Prepare(u)};
-            File.AppendAllLines(PATH, linha);
-        }
+        // public void CadastrarUsuario(Usuario u)
+        // {
+        //     string[] linha = {Prepare(u)};
+        //     File.AppendAllLines(PATH, linha);
+        // }
         
         //Perfil
         public List<Usuario> MostrarUsuario(int id) 
@@ -107,15 +107,15 @@ namespace Projeto_de_Avaliacao_Senai.Models
             return usuarios;
         }
 
-        public string Prepare(Usuario u)
-        {
-            throw new NotImplementedException();
-        }
+        // public string Prepare(Usuario u)
+        // {
+        //     throw new NotImplementedException();
+        // }
 
-        public void Seguir(int id)
-        {
-            throw new NotImplementedException();
-        }
+        // public void Seguir(int id)
+        // {
+        //     throw new NotImplementedException();
+        // }
 
         public List<Usuario> ListarUsuario()
         {
