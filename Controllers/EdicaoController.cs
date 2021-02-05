@@ -21,7 +21,6 @@ namespace Projeto_de_Avaliacao_Senai.Controllers
         public IActionResult DeletarUsuario(int id)
         {
             usuarioModel.DeletarUsuario(id);
-            ViewBag.Usuario = usuarioModel.ListarUsuario();
 
             return LocalRedirect("~/EdicaoPerfil");
         }
@@ -30,7 +29,6 @@ namespace Projeto_de_Avaliacao_Senai.Controllers
         public IActionResult EditarUsuario(Usuario u)
         {
             usuarioModel.EditarUsuario(u);
-            // ViewBag.Usuario = usuarioModel.RewriteCSV(string path, List<string> linhas);
 
             return LocalRedirect("~/EdicaoPerfil");
         }
