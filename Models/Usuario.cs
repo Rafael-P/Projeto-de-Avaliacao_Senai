@@ -70,9 +70,37 @@ namespace Projeto_de_Avaliacao_Senai.Models
             throw new NotImplementedException();
         }
 
-        public Usuario MostrarUsuario(int id)
+       /*Abaixo será criado um metódo para preparar a linha do CSV*/
+        public string Prepare(Usuario u)
         {
-            throw new NotImplementedException();
+            /*Aqui vamos retornar todos as "caracteristicas" necessarias para criar um usuario para colocar no csv*/
+            return $"{u.IdUsuario};{u.Foto};{u.Nome};{u.Seguidos};{u.Username}";
+        }
+
+        public void CadastrarUsuario(Usuario u)
+        {
+            string[] linha = {Prepare(u)};
+            File.AppendAllLines(PATH, linha);
+        }
+        
+        //Perfil
+        public List<Usuario> MostrarUsuario(int id) 
+        {
+            List<Usuario> usuarios = new List<Usuario>();
+            string[] linhas = File.ReadAllLines(PATH);
+            
+            foreach (var item in linhas)
+            {
+                string [] linha = item.Split(";");
+
+                Usuario usuario   = new Usuario();
+                usuario.IdUsuario       = int.Parse (linha[0]);
+                usuario.Foto            = linha[1];
+                usuario.Nome            = linha[2];
+                usuario.Seguidos        = Int32.Parse (linha[3]);
+                usuario.Username        = linha[4];
+            }
+            return usuarios;
         }
 
         public string Prepare(Usuario u)
@@ -84,6 +112,10 @@ namespace Projeto_de_Avaliacao_Senai.Models
         {
             throw new NotImplementedException();
         }
-        
+
+        public void Delete(int id)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
