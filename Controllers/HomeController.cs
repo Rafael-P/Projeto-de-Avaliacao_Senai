@@ -12,6 +12,8 @@ namespace Projeto_de_Avaliacao_Senai.Controllers
 {
     public class HomeController : Controller
     {
+        Usuario usuarioModel = new Usuario();
+
         private readonly ILogger<HomeController> _logger;
 
         public HomeController(ILogger<HomeController> logger)
@@ -24,7 +26,13 @@ namespace Projeto_de_Avaliacao_Senai.Controllers
             return View();
         }
 
-        
+        [Route("Logar")]
+        public IActionResult Logar(string email, string senha)
+        {
+            usuarioModel.Logar(email, senha);
+
+            return LocalRedirect("~/Feed");
+        }
         
 
     }
