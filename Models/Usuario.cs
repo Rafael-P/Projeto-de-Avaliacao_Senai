@@ -31,7 +31,6 @@ namespace Projeto_de_Avaliacao_Senai.Models
             /*Aqui vamos retornar todos as "caracteristicas" necessarias para criar um usuario para colocar no csv*/
             return $"{u.IdUsuario};{u.Nome};{u.Foto};{u.DataNascimento};{u.Seguidos};{u.Email};{u.Username};{u.Senha}";
         }
-
         public void CadastrarUsuario(Usuario u)
         {
             string[] linha = {Prepare(u)};
@@ -46,6 +45,14 @@ namespace Projeto_de_Avaliacao_Senai.Models
             //remove a linha que tiver o id igual ao comparado
             linhas.RemoveAll( x => x.Split(";")[0] == IdUsuario.ToString() );
 
+        public List<Usuario> ListarUsuario()
+        {
+            
+            List<string> linhas = ReadAllLinesCSV(PATH);
+            linhas.RemoveAll( x => x.Split(";")[0] == u.IdUsuario.ToString() );
+            linhas.Add( Prepare(u) );
+            RewriteCSV(PATH, linhas);
+
         }
 
         public void EditarUsuario(Usuario u)
@@ -58,12 +65,7 @@ namespace Projeto_de_Avaliacao_Senai.Models
 
         }
 
-        public void Seguir(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public List<Usuario> ListarUsuario()
+        public Usuario Logar(string email, string senha)
         {
             throw new NotImplementedException();
         }
@@ -73,11 +75,15 @@ namespace Projeto_de_Avaliacao_Senai.Models
             throw new NotImplementedException();
         }
 
-        // public Usuario Logar(string email, string senha)
-        // {
-            
-        // }
+        public string Prepare(Usuario u)
+        {
+            throw new NotImplementedException();
+        }
 
-
+        public void Seguir(int id)
+        {
+            throw new NotImplementedException();
+        }
+        
     }
 }

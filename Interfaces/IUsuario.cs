@@ -20,9 +20,9 @@ namespace Projeto_de_Avaliacao_Senai.Interfaces
         Usuario MostrarUsuario(int id);    
         void EditarUsuario(Usuario u);               
         void DeletarUsuario(int id);
-        List<Usuario> ListarUsuario();          
-        // Usuario Logar(string email, string senha); 
-        void Seguir(int id);              
-       
+        List<Usuario> ListarUsuario();
+        Usuario Logar(string email, string senha); 
+        void Seguir(int id);
+        string Prepare(Usuario u);
     }
 }
