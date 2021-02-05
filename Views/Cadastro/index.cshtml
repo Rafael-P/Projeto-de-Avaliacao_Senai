@@ -10,7 +10,7 @@
 
             <div>
                 <!--Formulário início-->
-                <form >
+                <form method="POST" action='@Url.Action("Cadastrar")'>
                
                     <input  type="text" name="Email" placeholder="E-mail" class="c-inputs" id="c-input1" required />
                    
@@ -52,7 +52,7 @@
                     <input  type="text" name="Nome" placeholder="Nome completo" class="c-inputs" required />
                     <input  type="text" name="Username" placeholder="Username" class="c-inputs" required />
                     <input  type="password" name="Senha" placeholder="Senha" class="c-inputs" required />
-                    <a><button class="c-botao">Cadastrar</button></a>
+                    <button  type="submit" class="c-botao">Cadastrar</button>
 
                 </form>
 

@@ -5,8 +5,9 @@ using Projeto_de_Avaliacao_Senai.Models;
 
 namespace Projeto_de_Avaliacao_Senai.Controllers
 {
-    public class CadastroController : Controller
-    {
+        [Route("Cadastrar")]
+         public class CadastroController : Controller
+        {
         
         Usuario usuarioModel = new Usuario();
 
@@ -15,7 +16,7 @@ namespace Projeto_de_Avaliacao_Senai.Controllers
             ViewBag.Usuarios = usuarioModel.ListarUsuario();
             return View();
         }
-
+        [Route("Novo")]
         public IActionResult Cadastrar(IFormCollection form)
         {
             Random numeroID = new Random();
