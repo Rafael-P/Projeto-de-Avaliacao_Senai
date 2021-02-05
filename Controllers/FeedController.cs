@@ -12,11 +12,23 @@ namespace Projeto_de_Avaliacao_Senai.Controllers
         Publicacao publicacaoModel = new Publicacao();
 
         public IActionResult Index(){
-            /*Foi listados todas as equipes e enviados para View, atráves da ViewBag*/
-            ViewBag.Usuarios = usuarioModel.ListarUsuario();
-            ViewBag.Postagem = publicacaoModel.ReadAll();
-            return View();
+
             
+
+            
+
+
+            /*A ViewBag pode ter o nome que você escolher*/
+            /*Chamamos na ViewBag.Usuarios e ViewBag.Postagem a função Listar de cada um*/
+            ViewBag.Usuarios = usuarioModel.ListarUsuario();
+            ViewBag.Postagem = publicacaoModel.ListarPublicacoes();
+            /*Nessa ViewBag abaixo, instanciamos as models necessarias*/
+            ViewBag.Comentarios = new Comentario();
+            ViewBag.objUsuario = new Usuario();
+
+
+
+            return View(); 
         }
     }
 }

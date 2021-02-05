@@ -76,5 +76,13 @@ namespace Projeto_de_Avaliacao_Senai.Models
             RewriteCSV(PATH, linhas);
         }
 
+        /*Foi criado uma função adicional para buscar os comentarios feitos na IdPublicacao especifica*/
+        public List<Comentario> BuscarPorId(int IdPublicacao)
+        {
+            /**/
+            List<Comentario> comentarios = ListarComentarios().FindAll(x => x.IdPublicacao == IdPublicacao);
+
+            return comentarios;
+        }
     }
 }

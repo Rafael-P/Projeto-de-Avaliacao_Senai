@@ -152,6 +152,15 @@ namespace Projeto_de_Avaliacao_Senai.Models
 
             //Retorno dos usuários encontradas 
             return usuarioBuscado;
-        }   
+        } 
+
+        /*Foi criado uma função adicional para buscar os comentarios feitos na IdPublicacao especifica*/
+        public Usuario BuscarPorId(int IdUsuario)
+        {
+            /*Colocar só o find, pois estará procurando só um IdUsuario*/
+            Usuario usuario = ListarUsuario().Find(x => x.IdUsuario == IdUsuario);
+
+            return usuario;
+        }  
     }
 }
