@@ -10,9 +10,9 @@
 
     <div>
         <form method="POST" action='@Url.Action("Logar")'>
-            <input type="email" name="" placeholder="E-mail" class="inputs" required />
-            <input type="password" name="" placeholder="Senha" class="inputs" required />
-            <button class="botao">Login</button>
+            <input type="email" name="Email" placeholder="E-mail" class="lo-inputs" required />
+            <input type="password" name="Senha" placeholder="Senha" class="lo-inputs" required />
+            <button  type="submit" class="lo-botao">Login</button>
         </form>
 
         <div class="lo-separador">
@@ -21,23 +21,21 @@
             <p>OU</p>
             <hr>
             </hr>
+            
         </div>
     
+        <div class="lo-esq">
         <a href="#">Esqueceu a senha?</a>
+        </div>
 
     </div>
 
-    <a href="#">Esqueceu a senha?</a>
     <div class="lo-erro">@TempData.Peek("Mensagem")</div>
 
 </div>
-<div class="estrutura2">
-    <P>Não tem uma conta?</P>&nbsp;<a href="#">Cadatre-se</a>
+<div class="lo-estrutura2">
+    <P>Não tem uma conta?</P>&nbsp;<a href="https://localhost:5001/Cadastrar">Cadastre-se</a>
 </div>
-<div class="aplicativo">
-    <div class="p">
-        <p>Obtenha o aplicativo.</p>
-    </div>
 
     <div class="lo-aplicativo">
         <div class="lo-p">
