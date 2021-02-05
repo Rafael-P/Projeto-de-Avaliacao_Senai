@@ -7,8 +7,8 @@
     <img src="img/Instadev.svg" alt="logo instadev">
 
     <div>
-        <form>
-            <input type="text" name="" placeholder="E-mail" class="inputs" required />
+        <form method="POST" action='@Url.Action("Logar")'>
+            <input type="email" name="" placeholder="E-mail" class="inputs" required />
             <input type="password" name="" placeholder="Senha" class="inputs" required />
             <button class="botao">Login</button>
         </form>
@@ -24,6 +24,7 @@
     </div>
 
     <a href="#">Esqueceu a senha?</a>
+    <div class="lo-erro">@TempData.Peek("Mensagem")</div>
 
 </div>
 <div class="estrutura2">

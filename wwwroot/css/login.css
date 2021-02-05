@@ -109,3 +109,11 @@ a{
     margin: 2% auto 0 auto;
 }
 
+lo-erro{
+    font-size: 11px;
+    color: red;
+    font-family: Segoe UI ;
+    text-align: center;
+
+}
+

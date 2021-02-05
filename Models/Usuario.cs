@@ -20,7 +20,7 @@ namespace Projeto_de_Avaliacao_Senai.Models
         public string Senha { get; set; }
         [TempData] public string Mensagem { get; set; }
 
-        private const string PATH = "Database/Usuario.csv";
+        public string PATH = "Database/Usuario.csv";
         public Usuario()
         {
             CreateFolderAndFile(PATH);
