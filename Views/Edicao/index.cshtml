@@ -24,25 +24,27 @@
     </div>
 </header>
 
-<div class="ed-espaco"></div>
+<div class="ed-espaco">
 
-<div class="ed-bloco1">
+    <div class="ed-bloco1">
 
-    <div class="ed-bloco2">
-        <div class="ed-head">
+        <div class="ed-bloco2">
             <hr class="ed-vertical">
             <div class="ed-container">
                 <h1>Editar Perfil</h1>
             </div>
         </div>
-    </div>
 
     <div class="ed-bloco3">
         <div class="ed-miniContainer">
             <img src="img/Perfil.png" alt="foto de perfil" />
             <div class="ed-z">
                 <h2>Nome_do_Usuario</h2>
-                <a href="#">Alterar foto do Perfil</a>
+                    
+                    <input type="file" id="file" accept="image/" class="ed-foto" placeholder="Alterar foto de perfil" />
+                    <a asp-area="Alterar foto" asp-controller="" asp-action="Index"><label for="file" class="ed-foto">Alterar foto de perfil &nbsp</label></a>
+                  
+                  
             </div>
         </div>
 

@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -41,7 +42,11 @@ namespace Projeto_de_Avaliacao_Senai.Controllers
             // Redirecionamos o usuário logado caso encontrado
             if(logado != null)
             {
+                
                 HttpContext.Session.SetString("IdLogado", logado.Split(";")[0]);
+
+                var x = HttpContext.Session.GetString("IdLogado");
+                
                 return LocalRedirect("~/Perfil");
             }
 

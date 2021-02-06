@@ -16,8 +16,8 @@
       <a asp-area="" asp-controller="" asp-action=""><img src="~/img/Direct.svg" alt="Direct"></a>
       <a asp-area="" asp-controller="" asp-action=""><img src="~/img/Bussula.svg" alt="Bussula"></a>
       <a asp-area="" asp-controller="" asp-action=""><img src="~/img/Like.svg" alt="Like"></a>
-      <a asp-area="link para o perfil" asp-controller="Perfil" asp-action="Index"><img src="~/img/Perfil.png"
-          alt="Link para o perfil"></a>
+      <a asp-area="link para o perfil" asp-controller="Perfil" asp-action="Index"><img src="~/img/@ViewBag.Logado.Foto"
+      alt="Link para o perfil"></a>
     </div>
   </div>
 </header>
@@ -27,62 +27,44 @@
     <article>
 
       <section class="status">
+        @foreach(Usuario u in ViewBag.Usuarios)
+        {
         <div>
-          <img src="~/img/vin-diesel.png" alt="Foto de perfil de outro usuário na barra de status" />
-          <p>vin_diesel</p>
+          <img src="~/img/@u.Foto" alt="Foto de perfil de outro usuário na barra de status" />
+          <p>@u.Username</p>
         </div>
-        <div>
-          <img src="~/img/gabigordo.png" alt="Foto de perfil de outro usuário na barra de status" />
-          <p>gabigordo</p>
-        </div>
-        <div>
-          <img src="~/img/will_baiano.png" alt="Foto de perfil de outro usuário na barra de status" />
-          <p>will_baiano</p>
-        </div>
-        <div>
-          <img src="~/img/tony_stark.png" alt="Foto de perfil de outro usuário na barra de status" />
-          <p>adriano_stark</p>
-        </div>
-        <div>
-          <img src="~/img/pele.png" alt="Foto de perfil de outro usuário na barra de status" />
-          <p>king_pele</p>
-        </div>
-        <div>
-          <img src="~/img/samuel_rosa.png" alt="Foto de perfil de outro usuário na barra de status" />
-          <p>samuel_rosa</p>
-        </div>
-        <div>
-          <img src="~/img/chaves_metal.png" alt="Foto de perfil de outro usuário na barra de status" />
-          <p>chaves_metal</p>
-        </div>
+        }
       </section>
 
+      
       <section class="postar">
         <div class="cabecalho-postar">
-          <img src="~/img/Perfil.png" alt="Foto do proprio perfil" />
+          <img src="~/img/@ViewBag.objUsuario.Foto" alt="Foto do proprio perfil" />
           <p>Postar</p>
-        </div>
-        <div class="corpo-postar">
-          <input type="text" class="corpo-postar-descricao" placeholder="Digite a descrição da imagem..." />
-          <input type="file" id="img-postar" class="corpo-postar-imagem" placeholder="Escolha a imagem" />
-          <label for="img-postar">Escolha a imagem</label>
-          <button type="submit">Postar</button>
-        </div>
+        </div> 
+          <div class="corpo-postar">
+            <form method="POST" action='@Url.Action("CriarPublicacao")' enctype="multipart/form-data">
+              <input type="text" name="inserir-legenda" class="corpo-postar-descricao" placeholder="Digite a descrição da imagem..." />
+              <input type="file" name="inserir-imagem" id="img-postar" class="corpo-postar-imagem" placeholder="Escolha a imagem" />
+              <label for="img-postar">Escolha a imagem</label>
+              <button type="submit">Postar</button>
+            </form>
+          </div>  
       </section>
+      
 
+      @foreach(Publicacao p in ViewBag.Postagem)
+      {    
       <section class="postagem">
-
-        @foreach(Publicacao publicacao in ViewBag.Feed){  
-
         <div class="cabecalho-postagem">
-          <img src="~/img/gabigordo.png" alt="Foto de perfil de outra pessoa" />
+          <img src="~/img/@ViewBag.objUsuario.BuscarPorId(p.IdUsuario).Foto" alt="Foto de perfil de outra pessoa" />
           <div class="nome-localizacao">
-            <p class="username">gabigordo</p>
+            <p class="username">@ViewBag.objUsuario.BuscarPorId(p.IdUsuario).Nome</p>
             <p>Flamengo, RJ</p>
           </div>
         </div>
 
-        <img src="~/img/post-gabigordo.png" alt="Post de outro usuario" class="img-postagem">
+        <img src="~/img/Feed/@p.Imagem" alt="Foto do post do usuário @ViewBag.objUsuario.BuscarPorId(p.IdUsuario).Nome" class="img-postagem">
 
         <div class="curtidas-comentarios">
 
@@ -99,32 +81,28 @@
           <p>2077 curtidas</p>
 
           <div class="postagem-mostrar">
+            @foreach(Comentario c in ViewBag.Comentarios.BuscarPorId(p.IdPublicacao))
+            {
             <div class="postagem-comentario">
-              <p class="p-username username">gabigordo</p>
-              <p class="p-comentario"><span>#flamengo</span> Amo vocês mil milhões</p>
+              <p class="p-username username">@ViewBag.objUsuario.BuscarPorId(c.IdUsuario).username</p>
+              <p class="p-comentario">@c.Mensagem</p>
             </div>
-            <div class="postagem-comentario">
-              <p class="p-username username">yes_baby</p>
-              <p class="p-comentario">thank you</p>
-            </div>
-            <div class="postagem-comentario">
-              <p class="p-username username">king_pele</p>
-              <p class="p-comentario">Esses são bons de bola, entende?</p>
-            </div>
+            }
           </div>
 
         </div>
-
-        }
       </section>
+      
+      }
+
 
     </article>
     <aside>
       <div class="perfil">
-        <img src="./img/Perfil-2.png" alt="Foto do próprio perfil">
+        <img src="~/img/@ViewBag.Logado.Foto" alt="Foto do próprio perfil">
         <div class="F-nomes">
-          <p class="username">yes_baby</p>
-          <p>Marcos Jeeves</p>
+          <p class="username">@ViewBag.Logado.Username</p>
+          <p>@ViewBag.Logado.Nome</p>
         </div>
       </div>
     </aside>

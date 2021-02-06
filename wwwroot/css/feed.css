@@ -30,7 +30,7 @@
     background: #FFFFFF;
     border: 1px solid #F1F1F1;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
   }
   
@@ -231,6 +231,7 @@
     border-right: none;
     border-bottom: 1px solid #DCDCDC;
     color: #AFAFAF;
+    outline: none;
   }
   
   .postagem-mostrar{
