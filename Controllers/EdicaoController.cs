@@ -17,7 +17,7 @@ namespace Projeto_de_Avaliacao_Senai.Controllers
             
         }
 
-        [Route("DeletarConta")]
+        [Route("DeletarUsuario")]
         public IActionResult DeletarUsuario(int id)
         {
             usuarioModel.DeletarUsuario(id);
@@ -31,7 +31,11 @@ namespace Projeto_de_Avaliacao_Senai.Controllers
             usuarioModel.EditarUsuario(u);
 
             return LocalRedirect("~/EdicaoPerfil");
+
+            
         }
+
+
 
 
     }

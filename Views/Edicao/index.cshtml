@@ -34,7 +34,18 @@
             </div>
         </div>
 
-        <div class="ed-bloco3">
+    <div class="ed-bloco3">
+        <div class="ed-miniContainer">
+            <img src="img/Perfil.png" alt="foto de perfil" />
+            <div class="ed-z">
+                <h2>Nome_do_Usuario</h2>
+                    
+                    <input type="file" id="file" accept="image/" class="ed-foto" placeholder="Alterar foto de perfil" />
+                    <a asp-area="Alterar foto" asp-controller="" asp-action="Index"><label for="file" class="ed-foto">Alterar foto de perfil &nbsp</label></a>
+                  
+                  
+            </div>
+        </div>
 
             <div class="ed-miniContainer">
                 <img src="img/Perfil.png" alt="foto de perfil" />
@@ -87,6 +98,11 @@
                         asp-action="DeletarUsuario">Desativar minha conta definitivamente</a>
                 </div>
             </div>
+        </div>
+        <br>
+        <div class="ed-agrupamento">
+            <button class="ed-button" type="submit" asp-area="Link para editar usuario" asp-controller="EdicaoController" asp-action="EditarUsuario">Enviar</button>
+            <a asp-area="Link para excluir um usuario" asp-controller="EdicaoController" asp-action="DeletarUsuario">Desativar minha conta definitivamente</a>
         </div>
     </div>
 

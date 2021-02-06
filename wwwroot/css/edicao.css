@@ -151,3 +151,12 @@
   color: white;
   margin-left: 45%;
 }
+
+input[type=file]{
+    display: none;
+}
+
+.ed-foto{
+    color: #2686CC;
+
+}
