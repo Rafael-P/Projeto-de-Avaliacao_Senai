@@ -22,7 +22,7 @@ namespace Projeto_de_Avaliacao_Senai.Controllers
         {
             usuarioModel.DeletarUsuario(id);
 
-            return LocalRedirect("~/EdicaoPerfil");
+            return LocalRedirect("~/Login");
         }
 
         [Route("EditarConta")]

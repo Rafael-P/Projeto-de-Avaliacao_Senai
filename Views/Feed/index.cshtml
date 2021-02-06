@@ -36,25 +36,26 @@
         }
       </section>
 
+      
       <section class="postar">
         <div class="cabecalho-postar">
           <img src="~/img/@ViewBag.objUsuario.Foto" alt="Foto do proprio perfil" />
           <p>Postar</p>
-        </div>
-        <div class="corpo-postar">
-          <input type="text" class="corpo-postar-descricao" placeholder="Digite a descrição da imagem..." />
-          <input type="file" id="img-postar" class="corpo-postar-imagem" placeholder="Escolha a imagem" />
-          <label for="img-postar">Escolha a imagem</label>
-          <button type="submit">Postar</button>
-        </div>
+        </div> 
+          <div class="corpo-postar">
+            <form method="POST" action='@Url.Action("CriarPublicacao")' enctype="multipart/form-data">
+              <input type="text" name="inserir-legenda" class="corpo-postar-descricao" placeholder="Digite a descrição da imagem..." />
+              <input type="file" name="inserir-imagem" id="img-postar" class="corpo-postar-imagem" placeholder="Escolha a imagem" />
+              <label for="img-postar">Escolha a imagem</label>
+              <button type="submit">Postar</button>
+            </form>
+          </div>  
       </section>
-
+      
 
       @foreach(Publicacao p in ViewBag.Postagem)
-      {  
+      {    
       <section class="postagem">
-
-       
         <div class="cabecalho-postagem">
           <img src="~/img/@ViewBag.objUsuario.BuscarPorId(p.IdUsuario).Foto" alt="Foto de perfil de outra pessoa" />
           <div class="nome-localizacao">
@@ -63,7 +64,7 @@
           </div>
         </div>
 
-        <img src="~/img/@p.Imagem" alt="Post de outro usuario" class="img-postagem">
+        <img src="~/img/Feed/@p.Imagem" alt="Foto do post do usuário @ViewBag.objUsuario.BuscarPorId(p.IdUsuario).Nome" class="img-postagem">
 
         <div class="curtidas-comentarios">
 
@@ -90,8 +91,8 @@
           </div>
 
         </div>
-  
       </section>
+      
       }
 
 
