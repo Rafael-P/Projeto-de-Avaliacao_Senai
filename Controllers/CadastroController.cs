@@ -14,7 +14,6 @@ namespace Projeto_de_Avaliacao_Senai.Controllers
 
         public IActionResult Index()
         {
-            ViewBag.Usuarios = usuarioModel.ListarUsuario();
             return View();
         }
         [Route("Novo")]
@@ -36,12 +35,9 @@ namespace Projeto_de_Avaliacao_Senai.Controllers
             novoUsuario.Email          = form["Email"];
             novoUsuario.Username       = form["Username"];
             novoUsuario.Senha          = form["Senha"];
+            novoUsuario.Foto           = "padrao.png";
 
-            usuarioModel.CadastrarUsuario(novoUsuario);            
-            ViewBag.Usuarios = usuarioModel.ListarUsuario();
-
-            Imagem novaImagem        = new Imagem();
-
+            /*
             if(form.Files.Count > 0)
             {
 
@@ -58,14 +54,17 @@ namespace Projeto_de_Avaliacao_Senai.Controllers
                 {  
                     file.CopyTo(stream);  
                 }
-                novaImagem.Imagens   = file.FileName;                
+
+                novoUsuario.Foto   = file.FileName;                
             }
             else
             {
-                novaImagem.Imagens  = "padrao.png";
-            }
+                novoUsuario.Foto  = "padrao.png";
+            }*/
+            
+            usuarioModel.CadastrarUsuario(novoUsuario); 
 
-            return LocalRedirect("~/Perfil ");
+            return LocalRedirect("~/Login");
         }
 
         
