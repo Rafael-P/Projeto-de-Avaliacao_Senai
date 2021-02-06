@@ -11,7 +11,11 @@ namespace Projeto_de_Avaliacao_Senai.Controllers
         public IActionResult Index()    
         {
             ViewBag.Usuario = usuarioModel.ReadAll();
+            
+            ViewBag.Comentarios = new Comentario();
+
             return View();
+
         }
 
     }

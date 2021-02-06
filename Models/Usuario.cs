@@ -18,6 +18,8 @@ namespace Projeto_de_Avaliacao_Senai.Models
         public string Username { get; set; }
         public string Senha { get; set; }
 
+        private const string PATH = "Database/Usuario.csv";
+
         public void Create(Usuario u)
         {
             throw new NotImplementedException();
