@@ -4,6 +4,8 @@ using Projeto_de_Avaliacao_Senai.Models;
 namespace Projeto_de_Avaliacao_Senai.Controllers
 {
     [Route("Perfil")]
+    [Route("Login")]
+
     public class PerfilController : Controller
     {
         Usuario usuarioModel = new Usuario();
@@ -15,8 +17,16 @@ namespace Projeto_de_Avaliacao_Senai.Controllers
             ViewBag.Comentarios = new Comentario();
 
             return View();
-
         }
+    }
 
+    public class LoginController : Controller
+    {
+        Usuario usuarioModel = new Usuario();
+        
+        public IActionResult Index()
+        {
+            return View();
+        }
     }
 }
