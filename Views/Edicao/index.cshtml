@@ -1,3 +1,4 @@
+@model Usuario
 @{
     ViewData["Title"] = "EdicaoPerfil";
 }
@@ -45,46 +46,48 @@
             </div>
         </div>
 
-        <div class="ed-campo">
-            <div class="ed-campoFlex">
-                <label>Nome</label>
-            </div>
-            <div class="ed-campoInput">
-                <input class="ed-input" type="text" name="nome" id="nome">
-                <p>Ajude as pessoas a descobrir sua conta usando o nome pelo qual você é<br>conhecido: seu nome
-                    completo, apelido ou nome comercial.</p>
-                <p>Você pode alterar o seu nome apenas duas vezes a cada 14 dias.</p>
-            </div>
-        </div>
-        <br>
-        <div class="ed-campo">
-            <div class="ed-campoFlex">
-                <label>Nome de Usuario</label>
-            </div>
-            <div class="ed-campoInput">
-                <input class="ed-input" type="text" name="nome de usuario" id="nome do usuario">
-                <p>Na maioria dos casos, você poderá alterar seu nome de usuário novamente<br>para nascimento_tr por
-                    mais 14 dias.</p>
+            <form method="POST" action='@Url.Action("EditarConta")'>
+                <div class="ed-campo">
+                    <div class="ed-campoFlex">
+                        <label>Nome</label>
+                    </div>
+                    <div class="ed-campoInput">
+                        <input class="ed-input" type="text" name="Nome" id="nome">
+                        <p>Ajude as pessoas a descobrir sua conta usando o nome pelo qual você é<br>conhecido: seu nome
+                            completo, apelido ou nome comercial.</p>
+                        <p>Você pode alterar o seu nome apenas duas vezes a cada 14 dias.</p>
+                    </div>
+                </div>
                 <br>
-                <p>Informações pessoais: Forneça suas informações pessoais, mesmo se a conta<br>for usada para uma
-                    empresa, um animal de estimação ou outra coisa. Elas não<br>farão parte do seu perfil público.</p>
+                <div class="ed-campo">
+                    <div class="ed-campoFlex">
+                        <label>Nome de Usuario</label>
+                    </div>
+                    <div class="ed-campoInput">
+                        <input class="ed-input" type="text" name="Username" id="nome do usuario">
+                        <p>Na maioria dos casos, você poderá alterar seu nome de usuário novamente<br>para nascimento_tr por
+                            mais 14 dias.</p>
+                        <br>
+                        <p>Informações pessoais: Forneça suas informações pessoais, mesmo se a conta<br>for usada para uma
+                            empresa, um animal de estimação ou outra coisa. Elas não<br>farão parte do seu perfil público.</p>
+                        <br>
+                    </div>
+                </div>
                 <br>
-            </div>
-        </div>
-        <br>
-        <div class="ed-campo">
-            <div class="ed-campoFlex">
-                <label>Email</label>
-            </div>
-            <div class="ed-campoInput">
-                <input class="ed-input" type="email" name="email" id="email">
-            </div>
-        </div>
-        <br>
-        <div class="ed-agrupamento">
-            <button class="ed-button" type="submit" asp-area="Link para editar usuario" asp-controller="EdicaoController" asp-action="EditarUsuario">Enviar</button>
-            <a asp-area="Link para excluir um usuario" asp-controller="EdicaoController" asp-action="DeletarUsuario">Desativar minha conta definitivamente</a>
-        </div>
+                <div class="ed-campo">
+                    <div class="ed-campoFlex">
+                        <label>Email</label>
+                    </div>
+                    <div class="ed-campoInput">
+                        <input class="ed-input" type="email" name="Email" id="email">
+                    </div>
+                </div>
+                <br>
+                <div class="ed-agrupamento">
+                    <button class="ed-button" type="submit" asp-area="Link para editar usuario" asp-controller="Edicao" asp-action="EditarUsuario">Enviar</button>
+                    <a asp-area="Link para excluir um usuario" asp-controller="Edicao" asp-action="DeletarUsuario">Desativar minha conta definitivamente</a>
+                </div>
+            </form>
     </div>
 
 </div>

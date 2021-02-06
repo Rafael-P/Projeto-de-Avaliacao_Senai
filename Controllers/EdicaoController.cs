@@ -5,7 +5,7 @@ using Projeto_de_Avaliacao_Senai.Models;
 
 namespace Projeto_de_Avaliacao_Senai.Controllers
 {
-    [Route("EdicaoPerfil")]
+    // [Route("EdicaoPerfil")]
     public class EdicaoController : Controller
     {
         Usuario usuarioModel = new Usuario();
@@ -22,15 +22,20 @@ namespace Projeto_de_Avaliacao_Senai.Controllers
         {
             usuarioModel.DeletarUsuario(id);
 
-            return LocalRedirect("~/EdicaoPerfil");
+            return LocalRedirect("~/Login");
         }
 
         [Route("EditarConta")]
-        public IActionResult EditarUsuario(Usuario u)
+        public IActionResult EditarUsuario(IFormCollection form)
         {
-            usuarioModel.EditarUsuario(u);
+            Usuario editarUsuario   = new Usuario();
+            editarUsuario.Nome      = form["Nome"];
+            editarUsuario.Username  = form["Username"];
+            editarUsuario.Email     = form["Email"];
 
-            return LocalRedirect("~/EdicaoPerfil");
+            usuarioModel.EditarUsuario(editarUsuario);
+
+            return LocalRedirect("~/Perfil");
         }
 
 
