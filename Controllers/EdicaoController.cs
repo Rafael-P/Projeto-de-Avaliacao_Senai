@@ -31,7 +31,11 @@ namespace Projeto_de_Avaliacao_Senai.Controllers
             usuarioModel.EditarUsuario(u);
 
             return LocalRedirect("~/EdicaoPerfil");
+
+            
         }
+
+
 
 
     }
