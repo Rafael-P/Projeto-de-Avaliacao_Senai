@@ -47,7 +47,7 @@ namespace Projeto_de_Avaliacao_Senai.Controllers
 
                 var x = HttpContext.Session.GetString("IdLogado");
                 
-                return LocalRedirect("~/Perfil");
+                return LocalRedirect("~/Feed");
             }
 
             Mensagem = "Dados incorretos, tente novamente...";

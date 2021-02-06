@@ -10,11 +10,11 @@ namespace Projeto_de_Avaliacao_Senai.Controllers
     public class FeedController : Controller
     {
 
+        
         /*Foi criado as instância necessarias*/
         Usuario usuarioModel = new Usuario();
-        Publicacao publicacaoModel = new Publicacao();
+        Publicacao publicacaoModel = new Publicacao(); 
 
-        [Route("Listar")]
         public IActionResult Index(){
 
             var x = HttpContext.Session.GetString("IdLogado");
@@ -80,7 +80,12 @@ namespace Projeto_de_Avaliacao_Senai.Controllers
             }
 
             novaPubli.IdUsuario = int.Parse(x);
+
             novaPubli.Likes = 0;
+
+
+            /*É necessario utilizar a instacia criada fora do metódo para passar todos os atributos dentro metóso desejado*/
+            publicacaoModel.CriarPublicacao(novaPubli);
 
             return LocalRedirect("~/Feed");
         }
