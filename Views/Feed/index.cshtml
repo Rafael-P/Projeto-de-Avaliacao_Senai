@@ -49,12 +49,12 @@
         </div>
       </section>
 
+
+      @foreach(Publicacao p in ViewBag.Postagem)
+      {  
       <section class="postagem">
 
-        @foreach(Publicacao p in ViewBag.Postagem)
-        {  
-
-
+       
         <div class="cabecalho-postagem">
           <img src="~/img/@ViewBag.objUsuario.BuscarPorId(p.IdUsuario).Foto" alt="Foto de perfil de outra pessoa" />
           <div class="nome-localizacao">
@@ -83,24 +83,25 @@
             @foreach(Comentario c in ViewBag.Comentarios.BuscarPorId(p.IdPublicacao))
             {
             <div class="postagem-comentario">
-              <p class="p-username username">gabigordo</p>
+              <p class="p-username username">@ViewBag.objUsuario.BuscarPorId(c.IdUsuario).username</p>
               <p class="p-comentario">@c.Mensagem</p>
             </div>
             }
           </div>
 
         </div>
-
-        }
+  
       </section>
+      }
+
 
     </article>
     <aside>
       <div class="perfil">
-        <img src="./img/Perfil-2.png" alt="Foto do próprio perfil">
+        <img src="~/img/@ViewBag.Logado.Foto" alt="Foto do próprio perfil">
         <div class="F-nomes">
-          <p class="username">yes_baby</p>
-          <p>Marcos Jeeves</p>
+          <p class="username">@ViewBag.Logado.Username</p>
+          <p>@ViewBag.Logado.Nome</p>
         </div>
       </div>
     </aside>
