@@ -7,10 +7,8 @@ using Projeto_de_Avaliacao_Senai.Models;
 namespace Projeto_de_Avaliacao_Senai.Controllers
 {
 
-    // [Route("Login")]
     public class LoginController : Controller
     {
-        
         Usuario usuarioModel = new Usuario();
 
         public IActionResult Index()
@@ -18,11 +16,9 @@ namespace Projeto_de_Avaliacao_Senai.Controllers
             return View();
         }
 
-        
         [TempData]
         public string Mensagem { get; set; }
 
-        
         [Route("Logar")]
         public IActionResult Logar(IFormCollection form)
         {
@@ -30,29 +26,24 @@ namespace Projeto_de_Avaliacao_Senai.Controllers
             List<string> csv = usuarioModel.ReadAllLinesCSV("Database/Usuario.csv");
 
             // Verificamos se as informações passadas existe na lista de string
-            var logado = 
+            var logado =
             csv.Find(
-                x => 
-                x.Split(";")[5] == form["Email"] && 
+                x =>
+                x.Split(";")[5] == form["Email"] &&
                 x.Split(";")[7] == form["Senha"]
             );
 
-            
-
             // Redirecionamos o usuário logado caso encontrado
-            if(logado != null)
+            if (logado != null)
             {
-                
                 HttpContext.Session.SetString("IdLogado", logado.Split(";")[0]);
-
                 var x = HttpContext.Session.GetString("IdLogado");
-                
-                return LocalRedirect("~/Perfil");
+
+                return LocalRedirect("~/Feed");
             }
 
             Mensagem = "Dados incorretos, tente novamente...";
             return LocalRedirect("~/");
-
-            }
+        }
     }
 }

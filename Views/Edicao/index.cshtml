@@ -37,12 +37,11 @@
 
     <div class="ed-bloco3">
         <div class="ed-miniContainer">
-            <img src="img/Perfil.png" alt="foto de perfil" />
+            <img  class="radius" src="img/thank-you 2.png" alt="foto de perfil" />
             <div class="ed-z">
-                <h2>Nome_do_Usuario</h2>
-                    
-                    <input type="file" id="file" accept="image/" class="ed-foto" placeholder="Alterar foto de perfil" />
-                    <a asp-area="Alterar foto" asp-controller="" asp-action="Index"><label for="file" class="ed-foto">Alterar foto de perfil &nbsp</label></a>
+                <h2>Nome do Usuario</h2>
+                <input type="file" id="file" accept="image/" class="ed-foto" placeholder="Alterar foto de perfil" />
+                <label for="file" class="ed-foto">Alterar foto de perfil &nbsp</label></a>
                   
                   
             </div>
@@ -51,38 +50,72 @@
             <form method="POST" action='@Url.Action("EditarConta")'>
                 <div class="ed-campo">
                     <div class="ed-campoFlex">
-                        <label>Nome</label>
+                        <label>Nome &nbsp &nbsp</label>
                     </div>
                     <div class="ed-campoInput">
                         <input class="ed-input" type="text" name="Nome" id="nome">
-                        <p>Ajude as pessoas a descobrir sua conta usando o nome pelo qual você é<br>conhecido: seu nome
-                            completo, apelido ou nome comercial.</p>
-                        <p>Você pode alterar o seu nome apenas duas vezes a cada 14 dias.</p>
+                        <p>Ajude as pessoas a descobrir sua conta usando o nome pelo qual você é conhecido: seu nome
+                            completo, apelido ou nome comercial.<br>Você pode alterar o seu nome apenas duas vezes a cada 14 dias.</p>
                     </div>
                 </div>
                 <br>
                 <div class="ed-campo">
-                    <div class="ed-campoFlex">
-                        <label>Nome de Usuario</label>
+                    <div class="ed-campoFlex" id="ed-dt">
+                        <label id="ed-usu"> Nome de usuário &nbsp &nbsp </label>
                     </div>
-                    <div class="ed-campoInput">
+                    <div class="ed-campoInput" id="ed-em">
                         <input class="ed-input" type="text" name="Username" id="nome do usuario">
-                        <p>Na maioria dos casos, você poderá alterar seu nome de usuário novamente<br>para nascimento_tr por
+                        <p>Na maioria dos casos, você poderá alterar seu nome de usuário novamente para nascimento_tr por
                             mais 14 dias.</p>
                         <br>
-                        <p>Informações pessoais: Forneça suas informações pessoais, mesmo se a conta<br>for usada para uma
+                        <p>Informações pessoais: Forneça suas informações pessoais, mesmo se a conta for usada para uma
                             empresa, um animal de estimação ou outra coisa. Elas não<br>farão parte do seu perfil público.</p>
                         <br>
                     </div>
                 </div>
                 <br>
+                
                 <div class="ed-campo">
+                    <div class="ed-datas">
+                        <label id="ed-dt2">Data de nascimento &nbsp &nbsp </label>
+                        <select name = "Dia" id="ed-dia"  >
+                        
+                        <option value="">Dia</option>
+                             
+                    </select>
+                   
+                    <select name="Mes"  id="ed-mes"  >
+                        
+                        <option>Mês </option>
+                        <option value="01">Janeiro  </option>
+                        <option value="02">Fevereiro</option>
+                        <option value="03">Março    </option>
+                        <option value="04">Abril    </option>
+                        <option value="05">Maio     </option>
+                        <option value="06">Junho    </option>
+                        <option value="07">Julho    </option>
+                        <option value="08">Agosto   </option>
+                        <option value="09">Setembro </option>
+                        <option value="10">Outubro  </option>
+                        <option value="11">Novembro </option>
+                        <option value="12">Dezembro </option>
+      
+                    </select>	
+                    
+                    <select name = "Ano" id="ano"  >
+                        <option value="">Ano</option>
+                    </select>
+                    </div>
+                    
+                    
                     <div class="ed-campoFlex">
-                        <label>Email</label>
+                        <label>Email &nbsp &nbsp </label>
                     </div>
                     <div class="ed-campoInput">
                         <input class="ed-input" type="email" name="Email" id="email">
                     </div>
+
+
                 </div>
                 <br>
                 <div class="ed-agrupamento">
@@ -93,3 +126,17 @@
     </div>
 
 </div>
+
+<script>
+var ano = document.getElementById('ano');
+var dia= document.getElementById('ed-dia');
+
+
+    for(var i = 1919; i <= 2021; i++){
+        ano.innerHTML+='<option value="'+i+'">'+i+'</option>'; }
+            
+    for(var i = 1; i <= 31; i++){
+        dia.innerHTML+='<option value="'+i+'">'+i+'</option>'; }
+            
+
+</script>

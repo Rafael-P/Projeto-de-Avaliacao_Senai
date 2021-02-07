@@ -5,7 +5,7 @@ using Projeto_de_Avaliacao_Senai.Models;
 
 namespace Projeto_de_Avaliacao_Senai.Controllers
 {
-    // [Route("EdicaoPerfil")]
+    [Route("EdicaoPerfil")]
     public class EdicaoController : Controller
     {
         Usuario usuarioModel = new Usuario();

@@ -66,10 +66,12 @@ namespace Projeto_de_Avaliacao_Senai.Models
         }
         public void EditarPublicacao(Publicacao p)
         {
+            /*Kemilly*/
             throw new System.NotImplementedException();
         }
         public void ExcluirPublicao(int id)
         {
+            /*Kemilly*/
             throw new System.NotImplementedException();
         }
 

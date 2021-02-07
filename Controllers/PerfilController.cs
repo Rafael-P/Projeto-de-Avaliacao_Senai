@@ -10,7 +10,7 @@ namespace Projeto_de_Avaliacao_Senai.Controllers
 
         public IActionResult Index()    
         {
-            ViewBag.Usuario = usuarioModel.ListarUsuario();
+            //ViewBag.Usuario = usuarioModel.ListarUsuario();
             return View();
         }
 
