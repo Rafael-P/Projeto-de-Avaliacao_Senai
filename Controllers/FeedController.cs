@@ -20,7 +20,7 @@ namespace Projeto_de_Avaliacao_Senai.Controllers
 
             var x = HttpContext.Session.GetString("IdLogado");
 
-            ViewBag.Logado = usuarioModel.BuscarPorId(int.Parse(x));  
+            ViewBag.Logado = usuarioModel.MostrarUsuario(int.Parse(x));  
 
             /*A ViewBag pode ter o nome que você escolher*/
             /*Chamamos na ViewBag.Usuarios e ViewBag.Postagem a função Listar de cada um*/

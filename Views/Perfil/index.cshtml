@@ -2,27 +2,6 @@
     ViewData["Title"] = "Perfil";
 }
 
-<header class="topo">
-    <div class="cabecalho">
-        <div class="posicaoLogo">
-            <a asp-area="link para o feed" asp-controller="Feed" asp-action="Index"><img src="~/img/Logo.svg"
-                    alt="Logo da pagina"></a>
-        </div>
-        <div class="pesquisa">
-            <input type="text" id="txtPesquisa" class="placeicon" placeholder="&#xf002; Pesquisar">
-        </div>
-        <div class="links">
-            <a asp-area="link para o feed" asp-controller="Feed" asp-action="Index"><img src="~/img/Home.svg"
-                    alt="Feed"></a>
-            <a asp-area="" asp-controller="" asp-action=""><img src="~/img/Direct.svg" alt="Direct"></a>
-            <a asp-area="" asp-controller="" asp-action=""><img src="~/img/Bussula.svg" alt="Bussula"></a>
-            <a asp-area="" asp-controller="" asp-action=""><img src="~/img/Like.svg" alt="Like"></a>
-            <a asp-area="link para o perfil" asp-controller="Perfil" asp-action="Index"><img src="~/img/Perfil.png"
-                    alt="Link para o perfil"></a>
-        </div>
-    </div>
-</header>
-
 <main class="main_P">
     <!-- Início do perfil -->
 
@@ -32,12 +11,12 @@
 
             <div class="foto_P">
                 <!-- Parte onde tem a foto do usuário -->
-                <img src="~/img/thank-you 3.svg" alt="foto do perfil">
+                <img class="radius" src="~/img/@ViewBag.Logado.Foto" alt="Foto do proprio perfil">
             </div>
 
             <div class="corpo_P">
                 <div class="nome_P">
-                    <p class="username_P"> yes_baby</p> @* @ViewBag.Usuario.Username *@
+                    <p class="username_P">@ViewBag.Logado.Username</p>
                     <p> <a class="links_P" asp-area="link para edicao" asp-controller="Edicao" asp-action="Index"> Editar perfil </a></p>
                 </div>
 
@@ -48,7 +27,7 @@
                 </div>
 
                 <div class="opcoes_P">
-                    <p class="nomeCompleto">Marcos Jeeves</p>
+                    <p class="nomeCompleto">@ViewBag.Logado.Nome</p>
                     <p> <a class="links_P" href="https://localhost:5001/"> Sair </a></p>
                 </div>
             </div>
@@ -67,10 +46,10 @@
 
             <div class="mae_P">
                 <div class="infoUser_P">
-                    <img class="imagemp_P" src="~/img/thank-you 4.png" alt="foto do perfil do usuário">
+                    <img class="imagemp_P radius" src="~/img/@ViewBag.Logado.Foto" alt="Foto do próprio perfil">
 
                     <div class="localizacao_P">
-                        <p class="negrito_P">Marco Jeeves</p>
+                        <p class="negrito_P">@ViewBag.Logado.Nome</p>
                         <p class="lugar_P">Rio de Janeiro, Brazil</p>
                     </div>
 

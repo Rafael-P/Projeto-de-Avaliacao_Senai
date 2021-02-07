@@ -40,14 +40,15 @@ namespace Projeto_de_Avaliacao_Senai.Models
             File.AppendAllLines(PATH, linha);
         }
 
-        public void DeletarUsuario(int id)
+        /*Foi criado essa função para buscar os comentarios feitos na IdPublicacao especifica*/
+        public Usuario MostrarUsuario(int IdUsuario)
         {
+            /*Colocar só o find, pois estará procurando só um IdUsuario*/
+            Usuario usuario = ListarUsuario().Find(x => x.IdUsuario == IdUsuario);
 
-            List<string> linhas = ReadAllLinesCSV(PATH);
+            return usuario;
+        }  
 
-            //remove a linha que tiver o id igual ao comparado
-            linhas.RemoveAll( x => x.Split(";")[0] == IdUsuario.ToString() );
-        }
         public void EditarUsuario(Usuario u)
         {
             
@@ -58,46 +59,13 @@ namespace Projeto_de_Avaliacao_Senai.Models
 
         }
 
-        // public Usuario Logar(string email, string senha)
-        // {
-        //     throw new NotImplementedException();
-        // }
-
-       /*Abaixo será criado um metódo para preparar a linha do CSV*/
-        // public string Prepare(Usuario u)
-        // {
-        //     /*Aqui vamos retornar todos as "caracteristicas" necessarias para criar um usuario para colocar no csv*/
-        //     return $"{u.IdUsuario};{u.Foto};{u.Nome};{u.Seguidos};{u.Username}";
-        // }
-
-        // public void CadastrarUsuario(Usuario u)
-        // {
-        //     string[] linha = {Prepare(u)};
-        //     File.AppendAllLines(PATH, linha);
-        // }
-        
-        //Perfil
-        public Usuario MostrarUsuario(int id) 
+        public void DeletarUsuario(int id)
         {
-            // int id -> o id da pessoa logada
-            
-            // procurar a pessoa pelo id
 
-            // trazer do csv, a linha inteira da pessoa 
+            List<string> linhas = ReadAllLinesCSV(PATH);
 
-            List<string> linhas = ReadAllLinesCSV(PATH); //pega todas as linhas do csv
-
-            string informacoes = linhas.Find (x => x.Split(";") [0] == id.ToString() );  //procurando o usuário -> resposta: 2;Foto.png;Kemilly;5000;Kemillyalgumacoisa
-
-            string[] linha = informacoes.Split(";"); //separa os itens
-
-              Usuario usuario   = new Usuario();
-                usuario.Foto            = linha[1];
-                usuario.Nome            = linha[2];
-                usuario.Seguidos        = Int32.Parse (linha[3]);
-                usuario.Username        = linha[4];
-            
-            return usuario; // -> retornar um usuário buscado
+            //remove a linha que tiver o id igual ao comparado
+            linhas.RemoveAll( x => x.Split(";")[0] == IdUsuario.ToString() );
         }
 
         public List<Usuario> ListarUsuario()
@@ -154,13 +122,5 @@ namespace Projeto_de_Avaliacao_Senai.Models
             return usuarioBuscado;
         } 
 
-        /*Foi criado uma função adicional para buscar os comentarios feitos na IdPublicacao especifica*/
-        public Usuario BuscarPorId(int IdUsuario)
-        {
-            /*Colocar só o find, pois estará procurando só um IdUsuario*/
-            Usuario usuario = ListarUsuario().Find(x => x.IdUsuario == IdUsuario);
-
-            return usuario;
-        }  
     }
 }

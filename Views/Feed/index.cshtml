@@ -2,25 +2,7 @@
   ViewData["Title"] = "Feed";
 }
 
-<header class="topo">
-  <div class="cabecalho">
-    <div class="posicaoLogo">
-      <a asp-area="link para o feed" asp-controller="Feed" asp-action="Index"><img src="~/img/Logo.svg"
-          alt="Logo da pagina"></a>
-    </div>
-    <div class="pesquisa">
-      <input type="text" id="txtPesquisa" class="placeicon" placeholder="&#xf002; Pesquisar">
-    </div>
-    <div class="links">
-      <a asp-area="link para o feed" asp-controller="Feed" asp-action="Index"><img src="~/img/Home.svg" alt="Feed"></a>
-      <a asp-area="" asp-controller="" asp-action=""><img src="~/img/Direct.svg" alt="Direct"></a>
-      <a asp-area="" asp-controller="" asp-action=""><img src="~/img/Bussula.svg" alt="Bussula"></a>
-      <a asp-area="" asp-controller="" asp-action=""><img src="~/img/Like.svg" alt="Like"></a>
-      <a asp-area="link para o perfil" asp-controller="Perfil" asp-action="Index"><img class="radius" src="~/img/@ViewBag.Logado.Foto"
-      alt="Link para o perfil"></a>
-    </div>
-  </div>
-</header>
+
 
 <main class="feed">
   <div class="conteudo">
@@ -57,14 +39,14 @@
       {    
       <section class="postagem">
         <div class="cabecalho-postagem">
-          @*<img class="radius" src="~/img/@ViewBag.objUsuario.BuscarPorId(p.IdUsuario).Foto" alt="Foto de perfil de outra pessoa" />*@
+          <img class="radius" src="~/img/@ViewBag.objUsuario.MostrarUsuario(p.IdUsuario).Foto" alt="Foto de perfil de outra pessoa" />
           <div class="nome-localizacao">
-            @*<p class="username">@ViewBag.objUsuario.BuscarPorId(p.IdUsuario).Nome</p>*@
+            <p class="username">@ViewBag.objUsuario.MostrarUsuario(p.IdUsuario).Nome</p>
             <p>Flamengo, RJ</p>
           </div>
         </div>
 
-        <img src="~/img/Feed/@p.Imagem" alt="Foto do post do usuário @ViewBag.objUsuario.BuscarPorId(p.IdUsuario).Nome" class="img-postagem">
+        <img src="~/img/Feed/@p.Imagem" alt="Foto do post do usuário @ViewBag.objUsuario.MostrarUsuario(p.IdUsuario).Nome" class="img-postagem">
 
         <div class="curtidas-comentarios">
 
@@ -88,14 +70,14 @@
           <div class="postagem-mostrar">
           
             <div class="postagem-comentario margin-mais">
-              <p class="p-username username">@ViewBag.objUsuario.BuscarPorId(p.IdUsuario).Username</p>
+              <p class="p-username username">@ViewBag.objUsuario.MostrarUsuario(p.IdUsuario).Username</p>
               <p class="p-comentario">@p.Legenda</p>
             </div>
       
             @foreach(Comentario c in ViewBag.Comentarios.BuscarPorId(p.IdPublicacao))
             {
             <div class="postagem-comentario">
-              <p class="p-username username">@ViewBag.objUsuario.BuscarPorId(c.IdUsuario).Username</p>
+              <p class="p-username username">@ViewBag.objUsuario.MostrarUsuario(c.IdUsuario).Username</p>
               <p class="p-comentario">@c.Mensagem</p>
             </div>
             }

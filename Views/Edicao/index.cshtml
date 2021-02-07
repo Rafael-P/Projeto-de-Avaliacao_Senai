@@ -3,26 +3,6 @@
     ViewData["Title"] = "EdicaoPerfil";
 }
 
-<header class="topo">
-    <div class="cabecalho">
-        <div class="posicaoLogo">
-            <a asp-area="link para o feed" asp-controller="Feed" asp-action="Index"><img src="~/img/Logo.svg"
-                    alt="Logo da pagina"></a>
-        </div>
-        <div class="pesquisa">
-            <input type="text" id="txtPesquisa" class="placeicon" placeholder="&#xf002; Pesquisar">
-        </div>
-        <div class="links">
-            <a asp-area="link para o feed" asp-controller="Feed" asp-action="Index"><img src="~/img/Home.svg"
-                    alt="Feed"></a>
-            <a asp-area="" asp-controller="" asp-action=""><img src="~/img/Direct.svg" alt="Direct"></a>
-            <a asp-area="" asp-controller="" asp-action=""><img src="~/img/Bussula.svg" alt="Bussula"></a>
-            <a asp-area="" asp-controller="" asp-action=""><img src="~/img/Like.svg" alt="Like"></a>
-            <a asp-area="link para o perfil" asp-controller="Perfil" asp-action="Index"><img src="~/img/Perfil.png"
-                    alt="Link para o perfil"></a>
-        </div>
-    </div>
-</header>
 
 <div class="ed-espaco">
 
@@ -37,9 +17,9 @@
 
     <div class="ed-bloco3">
         <div class="ed-miniContainer">
-            <img  class="radius" src="img/thank-you 2.png" alt="foto de perfil" />
+            <img  class="radius" src="img/@ViewBag.Logado.Foto" alt="foto de perfil" />
             <div class="ed-z">
-                <h2>Nome do Usuario</h2>
+                <h2>@ViewBag.Logado.Nome</h2>
                 <input type="file" id="file" accept="image/" class="ed-foto" placeholder="Alterar foto de perfil" />
                 <label for="file" class="ed-foto">Alterar foto de perfil &nbsp</label></a>
                   
@@ -64,7 +44,7 @@
                         <label id="ed-usu"> Nome de usuário &nbsp &nbsp </label>
                     </div>
                     <div class="ed-campoInput" id="ed-em">
-                        <input class="ed-input" type="text" name="Username" id="nome do usuario">
+                        <input class="ed-input" value="@ViewBag.Logado.Username" type="text" name="Username" id="nome do usuario">
                         <p>Na maioria dos casos, você poderá alterar seu nome de usuário novamente para nascimento_tr por
                             mais 14 dias.</p>
                         <br>
