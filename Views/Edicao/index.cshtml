@@ -14,18 +14,20 @@
                 <h1>Editar Perfil</h1>
             </div>
         </div>
-
+    
+    <form method="POST" action='@Url.Action("EditarConta")'>
     <div class="ed-bloco3">
         <div class="ed-miniContainer">
             <img  class="radius" src="img/@ViewBag.Logado.Foto" alt="foto de perfil" />
             <div class="ed-z">
                 <h2>@ViewBag.Logado.Nome</h2>
-                <input type="file" id="file" accept="image/" class="ed-foto" placeholder="Alterar foto de perfil" />
+                <input type="file"  name="Foto" id="file" accept="image/" class="ed-foto" placeholder="Alterar foto de perfil" />
                 <label for="file" class="ed-foto">Alterar foto de perfil &nbsp</label></a>
                   
                   
             </div>
         </div>
+    </form>    
 
             <form method="POST" action='@Url.Action("EditarConta")'>
                 <div class="ed-campo">
@@ -48,7 +50,7 @@
                         <p>Na maioria dos casos, você poderá alterar seu nome de usuário novamente para nascimento_tr por
                             mais 14 dias.</p>
                         <br>
-                        <p>Informações pessoais: Forneça suas informações pessoais, mesmo se a conta for usada para uma
+                        <p class="ed-pi">Informações pessoais: Forneça suas informações pessoais, mesmo se a conta for usada para uma
                             empresa, um animal de estimação ou outra coisa. Elas não<br>farão parte do seu perfil público.</p>
                         <br>
                     </div>
@@ -87,6 +89,10 @@
                         <option value="">Ano</option>
                     </select>
                     </div>
+
+                    <div>
+                        <p class="ed-pe"> Última data alterada :"@ViewBag.Logado.DataNascimento"</p>        
+                    </div>
                     
                     
                     <div class="ed-campoFlex">
@@ -101,7 +107,7 @@
                 <br>
                 <div class="ed-agrupamento">
                     <button class="ed-button" type="submit" asp-area="Link para editar usuario" asp-controller="Edicao" asp-action="EditarUsuario">Enviar</button>
-                    <a asp-area="Link para excluir um usuario" asp-controller="Edicao" asp-action="DeletarUsuario">Desativar minha conta definitivamente</a>
+                    <a  asp-controller="Edicao" asp-action="DeletarUsuario" asp-route-id="@ViewBag.Logado.IdUsuario"> Desativar minha conta definitivamente</a>
                 </div>
             </form>
     </div>

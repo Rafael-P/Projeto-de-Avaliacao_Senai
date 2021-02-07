@@ -48,6 +48,7 @@ namespace Projeto_de_Avaliacao_Senai.Controllers
             editarUsuario.Nome      = form["Nome"];
             editarUsuario.Username  = form["Username"];
             editarUsuario.Email     = form["Email"];
+            editarUsuario.Foto      =form["Foto"];
             
 
             usuarioModel.EditarUsuario(editarUsuario);

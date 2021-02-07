@@ -36,7 +36,38 @@ namespace Projeto_de_Avaliacao_Senai.Controllers
             novoUsuario.Email = form["Email"];
             novoUsuario.Username = form["Username"];
             novoUsuario.Senha = form["Senha"];
-            novoUsuario.Foto = "padrao.png";
+
+            if(form.Files.Count > 0)
+            {
+                /*Variavel que armazena o arquivo enviada pelo usuário*/
+                var file = form.Files[0];
+                /*Essa varivel vai combinar (.Combine) o diretorio com a pasta*/
+                var folder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/img/Feed");
+
+                /*Condicional para ver se pasta "wwwroot/img/" já existe*/
+                if(!Directory.Exists(folder))
+                {
+                    /*folder é a variavel que está ali em cima*/
+                    Directory.CreateDirectory(folder);
+                }
+
+                /*Variavel para definir o caminho da criação do arquivo*/
+                                         //localhost:5001                                //Post   //imagem.jpg
+                var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/img/", folder, file.FileName);
+
+                /*Utilizada para fechar automaticamente*/
+                using(var stream = new FileStream(path, FileMode.Create))
+                {
+                    file.CopyTo(stream);
+                }
+
+                novoUsuario.Foto = file.FileName;
+            }
+            else
+            {
+                novoUsuario.Foto = "padrao.png";
+            }
+
 
             usuarioModel.CadastrarUsuario(novoUsuario);
 

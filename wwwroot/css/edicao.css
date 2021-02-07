@@ -50,7 +50,7 @@
 }
 
 .ed-bloco3 {
-  width: 80%;
+  width: 175%;
   height: 110%;
   background-color: rgb(255, 255, 255);
   margin-left: 0%;
@@ -150,7 +150,7 @@
   color: #909090;
   font-family: 'Segoe UI';
   width: 350px;
-  margin-bottom: -15px;
+  
   
 }
 
@@ -181,6 +181,7 @@
 
 input[type=file]{
     display: none;
+  
 }
 
 .ed-foto{
@@ -238,3 +239,12 @@ label {
   margin-right: 6px;
 }
 
+.ed-pe{
+  margin-bottom: 7px;
+  margin-top: -18px;
+  margin-left: 2px;
+}
+
+.ed-pi{
+  margin-bottom: -20px;
+}
