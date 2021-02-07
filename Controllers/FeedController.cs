@@ -13,7 +13,8 @@ namespace Projeto_de_Avaliacao_Senai.Controllers
         
         /*Foi criado as instância necessarias*/
         Usuario usuarioModel = new Usuario();
-        Publicacao publicacaoModel = new Publicacao(); 
+        Publicacao publicacaoModel = new Publicacao();
+        Comentario comentarioModel = new Comentario(); 
 
         public IActionResult Index(){
 
@@ -32,7 +33,7 @@ namespace Projeto_de_Avaliacao_Senai.Controllers
             return View(); 
         }
 
-        [Route("Cadastrar")]
+        [Route("CadastrarPublicacao")]
         public IActionResult CriarPublicacao(IFormCollection form)
         {
             var x = HttpContext.Session.GetString("IdLogado");
@@ -86,6 +87,27 @@ namespace Projeto_de_Avaliacao_Senai.Controllers
 
             /*É necessario utilizar a instacia criada fora do metódo para passar todos os atributos dentro metóso desejado*/
             publicacaoModel.CriarPublicacao(novaPubli);
+
+            return LocalRedirect("~/Feed");
+        }
+
+        
+        [Route("CadastrarComentario")]
+        public IActionResult CriarComentario(IFormCollection form)
+        {
+            var x = HttpContext.Session.GetString("IdLogado");
+
+            /*Gerar números aleatórios para o ID*/
+            Random comentarioId = new Random();
+
+            Comentario novoComent = new Comentario();
+
+            novoComent.IdComentario = comentarioId.Next();
+            novoComent.Mensagem = form["comentario"];
+            novoComent.IdUsuario = int.Parse(x);
+            novoComent.IdPublicacao = int.Parse(form["publicacaoId"]);
+
+            comentarioModel.CriarComentario(novoComent);
 
             return LocalRedirect("~/Feed");
         }

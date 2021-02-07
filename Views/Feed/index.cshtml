@@ -16,7 +16,7 @@
       <a asp-area="" asp-controller="" asp-action=""><img src="~/img/Direct.svg" alt="Direct"></a>
       <a asp-area="" asp-controller="" asp-action=""><img src="~/img/Bussula.svg" alt="Bussula"></a>
       <a asp-area="" asp-controller="" asp-action=""><img src="~/img/Like.svg" alt="Like"></a>
-      <a asp-area="link para o perfil" asp-controller="Perfil" asp-action="Index"><img src="~/img/@ViewBag.Logado.Foto"
+      <a asp-area="link para o perfil" asp-controller="Perfil" asp-action="Index"><img class="radius" src="~/img/@ViewBag.Logado.Foto"
       alt="Link para o perfil"></a>
     </div>
   </div>
@@ -30,7 +30,7 @@
         @foreach(Usuario u in ViewBag.Usuarios)
         {
         <div>
-          <img src="~/img/@u.Foto" alt="Foto de perfil de outro usuário na barra de status" />
+          <img class="radius" src="~/img/@u.Foto" alt="Foto de perfil de outro usuário na barra de status" />
           <p>@u.Username</p>
         </div>
         }
@@ -39,13 +39,13 @@
       
       <section class="postar">
         <div class="cabecalho-postar">
-          <img src="~/img/@ViewBag.Logado.Foto" alt="Foto do proprio perfil" />
+          <img class="radius" src="~/img/@ViewBag.Logado.Foto" alt="Foto do proprio perfil" />
           <p>Postar</p>
         </div> 
           <div class="corpo-postar">
             <form method="POST" action='@Url.Action("CriarPublicacao")' enctype="multipart/form-data">
               <input type="text" name="inserir-legenda" class="corpo-postar-descricao" placeholder="Digite a descrição da imagem..." />
-              <input type="file" name="inserir-imagem" id="img-postar" class="corpo-postar-imagem" placeholder="Escolha a imagem" />
+              <input type="file" name="inserir-imagem" id="img-postar" class="corpo-postar-imagem" placeholder="Escolha a imagem" required/>
               <label for="img-postar">Escolha a imagem</label>
               <button type="submit">Postar</button>
             </form>
@@ -57,7 +57,7 @@
       {    
       <section class="postagem">
         <div class="cabecalho-postagem">
-          <img src="~/img/@ViewBag.objUsuario.BuscarPorId(p.IdUsuario).Foto" alt="Foto de perfil de outra pessoa" />
+          <img class="radius" src="~/img/@ViewBag.objUsuario.BuscarPorId(p.IdUsuario).Foto" alt="Foto de perfil de outra pessoa" />
           <div class="nome-localizacao">
             <p class="username">@ViewBag.objUsuario.BuscarPorId(p.IdUsuario).Nome</p>
             <p>Flamengo, RJ</p>
@@ -68,38 +68,47 @@
 
         <div class="curtidas-comentarios">
 
-          <div class="postagem-inserir">
+          <div class="f-icon">
+
             <div class="f-like">
               <label for="amei"><input type="checkbox" class="love-input" onclick="like();" id="amei"><img
-                  src="~/img/Like.svg" alt="Amei" id="alterar-icone"></label>
+              src="~/img/Like.svg" alt="Amei" id="alterar-icone" class="icone-comentario"></label>
             </div>
-            <label for="icon-comentario" class="icone-comentario"><img src="~/img/Comentario.svg"
-                alt="Icone de comentário"></label>
-            <input type="text" id="icon-comentario" class="fazer-comentario" placeholder="Comentar..." />
-          </div>
+            <label for="icon-comentario"><img src="~/img/Comentario.svg" alt="Icone de comentário" class="icone-comentario"></label>
 
-          <p>2077 curtidas</p>
+            <form method="POST" class="postagem-inserir" action='@Url.Action("CriarComentario")' enctype="multipart/form-data">
+              <input name="publicacaoId" value="@p.IdPublicacao" type="hidden">
+              <input type="text" name="comentario" id="icon-comentario" class="fazer-comentario" placeholder="Comentar..." >
+              <button type="submit" class="btn-invisivel"></button>
+            </form>
+          </div>
+       
+          <p>@p.Likes curtidas</p>
 
           <div class="postagem-mostrar">
+          
+            <div class="postagem-comentario margin-mais">
+              <p class="p-username username">@ViewBag.objUsuario.BuscarPorId(p.IdUsuario).Username</p>
+              <p class="p-comentario">@p.Legenda</p>
+            </div>
+      
             @foreach(Comentario c in ViewBag.Comentarios.BuscarPorId(p.IdPublicacao))
             {
             <div class="postagem-comentario">
-              <p class="p-username username">@ViewBag.objUsuario.BuscarPorId(c.IdUsuario).username</p>
+              <p class="p-username username">@ViewBag.objUsuario.BuscarPorId(c.IdUsuario).Username</p>
               <p class="p-comentario">@c.Mensagem</p>
             </div>
             }
           </div>
 
         </div>
-      </section>
-      
+      </section>    
       }
-
 
     </article>
     <aside>
       <div class="perfil">
-        <img src="~/img/@ViewBag.Logado.Foto" alt="Foto do próprio perfil">
+        <img class="radius" src="~/img/@ViewBag.Logado.Foto" alt="Foto do próprio perfil">
         <div class="F-nomes">
           <p class="username">@ViewBag.Logado.Username</p>
           <p>@ViewBag.Logado.Nome</p>
