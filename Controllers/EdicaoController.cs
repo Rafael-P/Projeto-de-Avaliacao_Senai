@@ -33,7 +33,7 @@ namespace Projeto_de_Avaliacao_Senai.Controllers
             
         }
 
-        [Route("DeletarUsuario")]
+        [Route("Usuario/{id}")]
         public IActionResult DeletarUsuario(int id)
         {
             usuarioModel.DeletarUsuario(id);
@@ -48,12 +48,14 @@ namespace Projeto_de_Avaliacao_Senai.Controllers
             editarUsuario.Nome      = form["Nome"];
             editarUsuario.Username  = form["Username"];
             editarUsuario.Email     = form["Email"];
+            
 
             usuarioModel.EditarUsuario(editarUsuario);
 
             return LocalRedirect("~/Perfil");
         }
 
+        
 
 
 

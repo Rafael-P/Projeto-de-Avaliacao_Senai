@@ -31,7 +31,7 @@ namespace Projeto_de_Avaliacao_Senai.Controllers
             string mes = form["Mes"];
             string ano = form["Ano"];
             string dataNascimento = string.Concat(dia + "/" + mes + "/" + ano); // -> dia/mes/ano
-            novoUsuario.DataNascimento = DateTime.Parse(dataNascimento);
+            novoUsuario.DataNascimento = DateTime.Parse( dataNascimento );
             // novoUsuario.DataNascimento = DateTime.Parse(form["Data"]); // Data -> 04/02/2021 <- value
             novoUsuario.Email = form["Email"];
             novoUsuario.Username = form["Username"];

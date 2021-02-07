@@ -33,7 +33,7 @@
                         <label>Nome &nbsp &nbsp</label>
                     </div>
                     <div class="ed-campoInput">
-                        <input class="ed-input" type="text" name="Nome" id="nome">
+                        <input class="ed-input" value="@ViewBag.Logado.Nome" type="text" name="Nome" id="nome">
                         <p>Ajude as pessoas a descobrir sua conta usando o nome pelo qual você é conhecido: seu nome
                             completo, apelido ou nome comercial.<br>Você pode alterar o seu nome apenas duas vezes a cada 14 dias.</p>
                     </div>
@@ -55,16 +55,17 @@
                 </div>
                 <br>
                 
+                
                 <div class="ed-campo">
                     <div class="ed-datas">
                         <label id="ed-dt2">Data de nascimento &nbsp &nbsp </label>
-                        <select name = "Dia" id="ed-dia"  >
+                        <select name="Dia" id="ed-dia"  >
                         
-                        <option value="">Dia</option>
+                        <option value="" >Dia</option>
                              
                     </select>
                    
-                    <select name="Mes"  id="ed-mes"  >
+                    <select  name="Mes"  id="ed-mes"  >
                         
                         <option>Mês </option>
                         <option value="01">Janeiro  </option>
@@ -82,7 +83,7 @@
       
                     </select>	
                     
-                    <select name = "Ano" id="ano"  >
+                    <select name="Ano" id="ano"  >
                         <option value="">Ano</option>
                     </select>
                     </div>
@@ -92,7 +93,7 @@
                         <label>Email &nbsp &nbsp </label>
                     </div>
                     <div class="ed-campoInput">
-                        <input class="ed-input" type="email" name="Email" id="email">
+                        <input class="ed-input" value="@ViewBag.Logado.Email" type="email" name="Email" id="email">
                     </div>
 
 
