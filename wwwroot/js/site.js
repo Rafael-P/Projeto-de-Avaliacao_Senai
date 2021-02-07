@@ -6,8 +6,8 @@
 function like()
 {
     if(document.getElementById("amei").checked == false){
-        document.getElementById("alterar-icone").src="../Feed/img/Like-vermelho.svg";
+        document.getElementById("alterar-icone").src="img/Like.svg";
     }else{
-        document.getElementById("alterar-icone").src="../Feed/img/Like.svg";
+        document.getElementById("alterar-icone").src="img/Like-vermelho.svg";
     }
 }
