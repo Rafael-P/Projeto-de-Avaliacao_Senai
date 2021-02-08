@@ -50,7 +50,8 @@ namespace Projeto_de_Avaliacao_Senai.Controllers
             editarUsuario.Username  = form["Username"];
             editarUsuario.Email     = form["Email"];
             editarUsuario.Foto      = form["Foto"];
-            editarUsuario.IdUsuario  =int.Parse(form["Id"]); 
+            editarUsuario.IdUsuario  = int.Parse(form["Id"]);
+            editarUsuario.Senha     = form["Senha"];
              
 
               if(form.Files.Count > 0)
