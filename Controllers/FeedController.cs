@@ -26,6 +26,7 @@ namespace Projeto_de_Avaliacao_Senai.Controllers
             /*Chamamos na ViewBag.Usuarios e ViewBag.Postagem a função Listar de cada um*/
             ViewBag.Usuarios = usuarioModel.ListarUsuario();
             ViewBag.Postagem = publicacaoModel.ListarPublicacoes();
+            
             /*Nessa ViewBag abaixo, instanciamos as models necessarias*/
             ViewBag.Comentarios = new Comentario();
             ViewBag.objUsuario = new Usuario();

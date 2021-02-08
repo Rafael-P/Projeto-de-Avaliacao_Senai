@@ -65,7 +65,9 @@ namespace Projeto_de_Avaliacao_Senai.Models
             List<string> linhas = ReadAllLinesCSV(PATH);
 
             //remove a linha que tiver o id igual ao comparado
-            linhas.RemoveAll( x => x.Split(";")[0] == IdUsuario.ToString() );
+            linhas.RemoveAll( x => x.Split(";")[0] == id.ToString());
+
+            RewriteCSV(PATH, linhas);
         }
 
         public List<Usuario> ListarUsuario()
