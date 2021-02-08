@@ -36,15 +36,24 @@
 
 
         <!--Início do feed das publicações-->
+
         <div class="logoPub_P">
             <img src="~/img/image 1.svg" alt="Logo de Publicações">
             <p>Publicações</p>
         </div>
 
+        @foreach(Publicacao p in @ViewBag.Post)
+        {
         <section class="postagens_P">
-            <img class="fotoPubli_P" src="~/img/Rectangle 4.svg" alt="Foto do usuário">
+            <img class="fotoPubli_P" src="~/img/Feed/@p.Imagem" alt="Foto da postagem do usuário">
 
             <div class="mae_P">
+
+                <div class="funcoes_P">
+                    <img class="edicao-lixeira_P" src="~/img/editar.svg" alt="coração para curtir a foto do usuário">
+                    <img class="edicao-lixeira_P" src="~/img/lixeira.svg" alt="coração para curtir a foto do usuário">
+                </div>
+
                 <div class="infoUser_P">
                     <img class="imagemp_P radius" src="~/img/@ViewBag.Logado.Foto" alt="Foto do próprio perfil">
 
@@ -60,45 +69,35 @@
                         <img src="~/img/Like.svg" alt="curtir a foto do usuário">
                         <img src="~/img/Vector.svg" alt="comentar foto do usuário">
                     </div>
-                    <p>1954 curtidas</p>
+                    <p>@p.Likes curtidas</p>
                 </div>
 
                 <div class="comentarios_P">
                     <div>
                         <div class="outrosComent_P">
-                            <p class="usuario_P negrito_P">fausto_silva</p>
-                            <p>Esse cara é fera bixo!!!</p>
-                        </div>
-                        <img src="~/img/Like.svg" alt="coração para curtir a foto do usuário">
+                            <p class="usuario_P negrito_P">@ViewBag.objUsuario.MostrarUsuario(p.IdUsuario).Username</p>
+                            <p>@p.Legenda</p>
+                        </div>    
                     </div>
 
+                    @foreach(Comentario c in ViewBag.Comentarios.BuscarPorId(p.IdPublicacao))
+                    {
                     <div>
                         <div class="outrosComent_P">
-                            <p class="usuario_P negrito_P">yes_baby</p>
-                            <p>thank you</p>
+                            <p class="usuario_P negrito_P">@ViewBag.objUsuario.MostrarUsuario(c.IdUsuario).Username</p>
+                            <p>@c.Mensagem</p>
                         </div>
+                        <form method="POST" action='@Url.Action("ExcluirComentario")' enctype="multipart/form-data">
+                        <button><img src="~/img/lixeira.svg" alt="coração para curtir a foto do usuário"></button>
+                        </form>
                         <img src="~/img/Like.svg" alt="coração para curtir a foto do usuário">
+            
                     </div>
-
-                    <div>
-                        <div class="outrosComent_P">
-                            <p class="usuario_P negrito_P">adriano_stark</p>
-                            <p>Quando eu adormecer, vou sonhar com você.<br>É sempre você.</p>
-                        </div>
-                        <img src="~/img/Like.svg" alt="coração para curtir a foto do usuário">
-                    </div>
-
-                    <div>
-                        <div class="outrosComent_P">
-                            <p class="usuario_P negrito_P">fausto_silva</p>
-                            <p>Yes baby!!!</p>
-                        </div>
-                        <img src="~/img/Like.svg" alt="coração para curtir a foto do usuário">
-                    </div>
-
+                    }
                 </div>
                 <p class="vertodos_P">Ver todos os 585 comentários</p>
             </div>
         </section>
+        }
     </div>
 </main> <!-- Fim do Perfil -->

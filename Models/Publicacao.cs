@@ -66,23 +66,34 @@ namespace Projeto_de_Avaliacao_Senai.Models
         }
         public void EditarPublicacao(Publicacao p)
         {
-            /*Kemilly*/
-            throw new System.NotImplementedException();
+            List<string> linhas = ReadAllLinesCSV(PATH);
+            /*Foi removido a linha pela comparação abaixo*/
+            linhas.RemoveAll(x => x.Split(";")[0] == p.IdPublicacao.ToString());
+            /*Adicionamos a linha alterada*/
+            linhas.Add(Prepare(p));
+            /*Reescrevemos o cvs com a linha alterada*/
+            RewriteCSV(PATH, linhas);
         }
         public void ExcluirPublicao(int id)
         {
-            /*Kemilly*/
-            throw new System.NotImplementedException();
+            List<string> linhas = ReadAllLinesCSV(PATH);
+            /*Foi removido a linha pela comparação abaixo*/
+            linhas.RemoveAll(x => x.Split(";")[0] == id.ToString());
+            /*Reescrevemos o cvs com a linha alterada*/
+            RewriteCSV(PATH, linhas);
         }
 
+        public List<Publicacao> BuscarPorId(int IdUsuario)
+        {
+            List<Publicacao> publicacoes = ListarPublicacoes().FindAll(x => x.IdUsuario == IdUsuario);
+
+            return publicacoes;
+        }
     
         public void Curtir(int id)
         {
             throw new System.NotImplementedException();
         }
-
-
-
 
     }
 }
