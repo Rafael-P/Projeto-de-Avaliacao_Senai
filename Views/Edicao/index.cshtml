@@ -15,6 +15,7 @@
             </div>
         </div>
 
+    <form method="POST" action='@Url.Action("EditarConta")'>
     <div class="ed-bloco3">
         <div class="ed-miniContainer">
             <img  class="radius" src="img/@ViewBag.Logado.Foto" alt="foto de perfil" />
@@ -22,12 +23,10 @@
                 <h2>@ViewBag.Logado.Nome</h2>
                 <input type="file" id="file" accept="image/" class="ed-foto" placeholder="Alterar foto de perfil" />
                 <label for="file" class="ed-foto">Alterar foto de perfil &nbsp</label></a>
-                  
-                  
             </div>
         </div>
 
-            <form method="POST" action='@Url.Action("EditarConta")'>
+
                 <div class="ed-campo">
                     <div class="ed-campoFlex">
                         <label>Nome &nbsp &nbsp</label>

@@ -26,8 +26,7 @@ namespace Projeto_de_Avaliacao_Senai.Controllers
             /*Nessa ViewBag abaixo, instanciamos as models necessarias*/
             ViewBag.Comentarios = new Comentario();
             ViewBag.objUsuario = new Usuario();
-        
-            
+                    
             //ViewBag.Usuario = usuarioModel.ListarUsuario();
             return View();
         }

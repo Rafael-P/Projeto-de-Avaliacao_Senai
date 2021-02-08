@@ -87,9 +87,9 @@
                             <p class="usuario_P negrito_P">@ViewBag.objUsuario.MostrarUsuario(c.IdUsuario).Username</p>
                             <p>@c.Mensagem</p>
                         </div>
-                        <form method="POST" action='@Url.Action("ExcluirComentario")' enctype="multipart/form-data">
-                        <button><img src="~/img/lixeira.svg" alt="coração para curtir a foto do usuário"></button>
-                        </form>
+                        
+                        <a asp-controller="Perfil" asp-action="ExcluirComentario" asp-route-id="" ><img src="~/img/lixeira.svg" alt="coração para curtir a foto do usuário"></a>
+                        
                         <img src="~/img/Like.svg" alt="coração para curtir a foto do usuário">
             
                     </div>
